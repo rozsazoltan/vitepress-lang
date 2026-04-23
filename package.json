@@ -1,0 +1,30 @@
+{
+  "name": "vitepress-lang",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "oxlint": "^1.61.0",
+    "typescript": "^5.8.0"
+  },
+  "scripts": {
+    "lint": "oxlint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "Default VitePress UI translations for themeConfig (default theme). Ready-to-use translated strings for search, nav, sidebar, and other interface elements.",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "AGPL-3.0-only",
+  "main": "./dist/index.js",
+  "type": "module",
+  "types": "./dist/index.d.ts"
+}

@@ -1,0 +1,21 @@
+amends "package://github.com/jdx/hk/releases/download/v1.43.0/hk@1.43.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.43.0/hk@1.43.0#/Builtins.pkl"
+
+hooks {
+  ["pre-commit"] {
+    fix = false
+    stash = "git"
+    steps {
+      ["oxlint"] = new Step {
+        glob = List("**/*.ts", "**/*.mts", "**/*.cts", "**/*.js", "**/*.mjs", "**/*.cjs")
+        check = "npm run lint"
+      }
+
+      ["typecheck"] = new Step {
+        glob = List("**/*.ts", "**/*.mts", "**/*.cts", "tsconfig.json", "package.json")
+        check = "npm run typecheck"
+        exclusive = true
+      }
+    }
+  }
+}
