@@ -1,24 +1,22 @@
 import type { VitePressLocalePack } from '../../types'
+import { deAskAiSidePanel } from './ask-ai'
 import { deAlgoliaSearch } from './algolia-search'
-import { deAskAiSidePanel } from './ask-ai-side-panel'
 import { deLocalSearch } from './local-search'
-import { deMeta } from './meta'
 import { deThemeConfig } from './theme'
 
+export { deAskAiSidePanel } from './ask-ai'
 export { deAlgoliaSearch } from './algolia-search'
-export { deAskAiSidePanel } from './ask-ai-side-panel'
 export { deLocalSearch } from './local-search'
-export { deMeta } from './meta'
 export { deThemeConfig } from './theme'
 
-export const de: VitePressLocalePack = {
-  ...deMeta,
+export const de = {
+  label: 'Deutsch',
+  lang: 'de-DE',
+  link: '/de/',
   themeConfig: deThemeConfig,
   search: {
-    local: { translations: deLocalSearch },
-    algolia: { translations: deAlgoliaSearch },
-    askAi: { sidePanel: deAskAiSidePanel }
+    local: deLocalSearch,
+    algolia: deAlgoliaSearch,
+    askAi: deAskAiSidePanel
   }
-}
-
-export default de
+} satisfies VitePressLocalePack

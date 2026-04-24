@@ -1,3 +1,3 @@
-export * from './types'
-export * from './helpers/create-config'
-export * from './locales'
+export { defineLangConfig, deepMerge } from './helpers/create-config'
+export { de, hu, localePacks } from './locales'
+export type * from './types'

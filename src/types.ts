@@ -1,21 +1,17 @@
 export type SupportedLocale = 'de' | 'hu'
-
 export type SearchProvider = 'local' | 'algolia'
 
+export interface LocaleMeta {
+  label: string
+  lang: string
+  link?: string
+}
+
 export interface DefaultThemeLocaleConfig {
-  outline: {
-    label: string
-  }
-  docFooter: {
-    prev: string
-    next: string
-  }
-  editLink: {
-    text: string
-  }
-  lastUpdated: {
-    text: string
-  }
+  outline: { label: string }
+  docFooter: { prev: string; next: string }
+  editLink: { text: string }
+  lastUpdated: { text: string }
   darkModeSwitchLabel: string
   lightModeSwitchTitle: string
   darkModeSwitchTitle: string
@@ -26,10 +22,7 @@ export interface DefaultThemeLocaleConfig {
 }
 
 export interface LocalSearchTranslations {
-  button: {
-    buttonText: string
-    buttonAriaLabel: string
-  }
+  button: { buttonText: string; buttonAriaLabel: string }
   modal: {
     displayDetails: string
     resetButtonTitle: string
@@ -48,10 +41,7 @@ export interface LocalSearchTranslations {
 }
 
 export interface AlgoliaSearchTranslations {
-  button: {
-    buttonText: string
-    buttonAriaLabel: string
-  }
+  button: { buttonText: string; buttonAriaLabel: string }
   modal: {
     searchBox: {
       clearButtonTitle: string
@@ -70,10 +60,7 @@ export interface AlgoliaSearchTranslations {
       viewConversationHistoryText: string
       threadDepthErrorPlaceholder: string
     }
-    newConversation: {
-      newConversationTitle: string
-      newConversationDescription: string
-    }
+    newConversation: { newConversationTitle: string; newConversationDescription: string }
     footer: {
       selectText: string
       submitQuestionText: string
@@ -86,10 +73,7 @@ export interface AlgoliaSearchTranslations {
       closeKeyAriaLabel: string
       poweredByText: string
     }
-    errorScreen: {
-      titleText: string
-      helpText: string
-    }
+    errorScreen: { titleText: string; helpText: string }
     startScreen: {
       recentSearchesTitle: string
       noRecentSearchesText: string
@@ -106,10 +90,7 @@ export interface AlgoliaSearchTranslations {
       reportMissingResultsText: string
       reportMissingResultsLinkText: string
     }
-    resultsScreen: {
-      askAiPlaceholder: string
-      noResultsAskAiPlaceholder: string
-    }
+    resultsScreen: { askAiPlaceholder: string; noResultsAskAiPlaceholder: string }
     askAiScreen: {
       disclaimerText: string
       relatedSourcesText: string
@@ -132,12 +113,7 @@ export interface AlgoliaSearchTranslations {
 }
 
 export interface AlgoliaAskAiSidePanelTranslations {
-  button: {
-    translations: {
-      buttonText: string
-      buttonAriaLabel: string
-    }
-  }
+  button: { translations: { buttonText: string; buttonAriaLabel: string } }
   panel: {
     translations: {
       header: {
@@ -170,53 +146,31 @@ export interface AlgoliaAskAiSidePanelTranslations {
         thanksForFeedbackText: string
         errorTitleText: string
       }
-      newConversationScreen: {
-        titleText: string
-        introductionText: string
-      }
-      logo: {
-        poweredByText: string
-      }
+      newConversationScreen: { titleText: string; introductionText: string }
+      logo: { poweredByText: string }
     }
   }
 }
 
-export interface VitePressLocalePack {
-  label: string
-  lang: string
-  link: string
+export interface VitePressLocalePack extends LocaleMeta {
   themeConfig: DefaultThemeLocaleConfig
   search: {
-    local: {
-      translations: LocalSearchTranslations
-    }
-    algolia: {
-      translations: AlgoliaSearchTranslations
-    }
-    askAi: {
-      sidePanel: AlgoliaAskAiSidePanelTranslations
-    }
+    local: { translations: LocalSearchTranslations }
+    algolia: { translations: AlgoliaSearchTranslations }
+    askAi: { sidePanel: AlgoliaAskAiSidePanelTranslations }
   }
 }
 
-export interface DefineLangOptions {
-  key?: string
+export type PlainObject = Record<string, unknown>
+
+export type LocaleConfigOverride = PlainObject & {
   label?: string
   lang?: string
   link?: string
-  searchProvider?: SearchProvider
+  themeConfig?: PlainObject
 }
 
-export interface VitePressGeneratedLocaleConfig {
-  label: string
-  lang: string
-  link?: string
-  themeConfig: DefaultThemeLocaleConfig & {
-    search: {
-      provider: SearchProvider
-      options: {
-        locales: Record<string, unknown>
-      }
-    }
-  }
+export interface DefineLangConfigOptions {
+  searchProvider?: SearchProvider
+  localeKey?: string
 }
