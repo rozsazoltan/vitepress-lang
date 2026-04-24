@@ -29,7 +29,7 @@ jobs:
         run: aube i
 
       - name: Build
-        run: aube build && aube build:types
+        run: aube build
 
       - name: Publish to npm
         run: aube publish --access public

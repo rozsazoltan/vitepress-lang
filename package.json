@@ -8,8 +8,7 @@
     "typescript": "^5.8.0"
   },
   "scripts": {
-    "build": "rolldown -c",
-    "build:types": "tsc --emitDeclarationOnly",
+    "build": "rolldown -c && tsc --emitDeclarationOnly",
     "lint": "oxlint .",
     "typecheck": "tsc --noEmit"
   },
@@ -21,10 +20,20 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./locales/de": {
+      "types": "./dist/locales/de.d.ts",
+      "import": "./dist/locales/de.js"
+    },
+    "./locales/hu": {
+      "types": "./dist/locales/hu.d.ts",
+      "import": "./dist/locales/hu.js"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "license": "AGPL-3.0-only",
   "main": "./dist/index.js",

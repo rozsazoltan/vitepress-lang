@@ -1,0 +1,1 @@
+export { default, de, deThemeConfig, deLocalSearch, deAlgoliaSearch, deAskAiSidePanel } from './locales/de'
