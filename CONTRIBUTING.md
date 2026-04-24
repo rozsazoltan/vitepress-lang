@@ -45,27 +45,28 @@ Without `hk`, pre-commit checks will not run automatically, so make sure to run 
 
 2. Create a new branch:
 
-```sh
-git checkout -b feat/fr-language
-```
+  ```sh
+  git checkout -b feat/fr-language
+  ```
 
 3. Add a new folder under `src/locales`.
 
 Example:
 
-```txt
-src/locales/fr/
-```
+  ```txt
+  src/locales/fr/
+  ```
 
 4. Copy the files from an existing locale folder:
 
-```txt
-theme.ts
-local-search.ts
-algolia-search.ts
-ask-ai.ts
-index.ts
-```
+  ```txt
+  theme.ts
+  local-search.ts
+  algolia-search.ts
+  ask-ai.ts
+  index.ts
+  // ...
+  ```
 
 5. Translate every string.
 
@@ -73,56 +74,56 @@ index.ts
 
 Example:
 
-```ts
-export type SupportedLocale = 'de' | 'hu' | 'fr'
-```
+  ```ts
+  export type SupportedLocale = 'en' | 'de' | 'hu' | /* ... */ | 'fr'
+  ```
 
 7. Export the locale from `src/locales/index.ts`.
 
-Example:
+  Example:
 
-```ts
-export { fr } from './fr'
-```
+  ```ts
+  export { fr } from './fr'
+  ```
 
 8. Add a subpath export to `package.json` if the language should be directly importable.
 
-Example:
+  Example:
 
-```json
-"./fr": {
-  "types": "./dist/locales/fr/index.d.ts",
-  "import": "./dist/fr.js"
-}
-```
+  ```json
+  "./fr": {
+    "types": "./dist/locales/fr/index.d.ts",
+    "import": "./dist/fr.js"
+  }
+  ```
 
 9. Run checks:
 
-```sh
-npm run lint
-npm run typecheck
-npm run build
-```
+  ```sh
+  npm run lint
+  npm run typecheck
+  npm run build
+  ```
 
 10. Commit your changes with a Conventional Commit message:
 
-```sh
-git commit -m "feat(fr): add French translations"
-```
+  ```sh
+  git commit -m "feat(fr): add French translations"
+  ```
 
 11. Push your branch:
 
-```sh
-git push origin feat/fr-language
-```
+  ```sh
+  git push origin feat/fr-language
+  ```
 
 12. Open a pull request.
 
 Suggested PR title:
 
-```txt
-feat(fr): add French translations
-```
+  ```txt
+  feat(fr): add French translations
+  ```
 
 Please mention whether the translation is native-reviewed, machine-assisted, or partially reviewed.
 
@@ -132,23 +133,23 @@ Please mention whether the translation is native-reviewed, machine-assisted, or 
 
 2. Create a new branch:
 
-```sh
-git checkout -b fix/de-translations
-```
+  ```sh
+  git checkout -b fix/de-translations
+  ```
 
 3. Edit the relevant files under:
 
-```txt
-src/locales/<locale>/
-```
+  ```txt
+  src/locales/<locale>/
+  ```
 
 4. Run checks:
 
-```sh
-npm run lint
-npm run typecheck
-npm run build
-```
+  ```sh
+  npm run lint
+  npm run typecheck
+  npm run build
+  ```
 
 5. Commit your changes:
 
