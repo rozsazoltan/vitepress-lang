@@ -23,7 +23,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Setup aube
-        uses: verzly/setup-aube@v1 
+        uses: verzly/setup-aube@v1
 
       - name: Install
         run: aube i
