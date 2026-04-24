@@ -122,20 +122,30 @@ import { de } from 'vitepress-lang/de'
 import { hu } from 'vitepress-lang/hu'
 ```
 
-## Contributing a new language
+## Contributing
 
-1. Add a new folder under `src/locales`, for example `src/locales/fr`.
-2. Copy the files from an existing locale folder:
-   - `theme.ts`
-   - `local-search.ts`
-   - `algolia-search.ts`
-   - `ask-ai.ts`
-   - `index.ts`
-3. Translate every string.
-4. Add the new locale code to `SupportedLocale` in `src/types.ts`.
-5. Export the locale from `src/locales/index.ts`.
-6. Add a subpath export to `package.json` if the language should be directly importable, for example `vitepress-lang/fr`.
-7. Run checks:
+### Create a new language
+
+1. Fork the repository.
+2. Create a new branch:
+
+```bash
+git checkout -b feat/fr-language
+````
+
+3. Add a new folder under `src/locales`, for example `src/locales/fr`.
+4. Copy the files from an existing locale folder:
+
+   * `theme.ts`
+   * `local-search.ts`
+   * `algolia-search.ts`
+   * `ask-ai.ts`
+   * `index.ts`
+5. Translate every string.
+6. Add the new locale code to `SupportedLocale` in `src/types.ts`.
+7. Export the locale from `src/locales/index.ts`.
+8. Add a subpath export to `package.json` if the language should be directly importable, for example `vitepress-lang/fr`.
+9. Run checks:
 
 ```bash
 npm run lint
@@ -143,22 +153,56 @@ npm run typecheck
 npm run build
 ```
 
-Then open a pull request.
-
-## Updating an existing language
-
-Edit the relevant files under `src/locales/<locale>` and open a pull request with a short note explaining the change.
-
-## Build
+10. Commit your changes with a clear Conventional Commit message, for example:
 
 ```bash
-npm install
+git commit -m "feat(fr): add French translations"
+```
+
+11. Push your branch and open a pull request:
+
+```bash
+git push origin feat/fr-language
+```
+
+Suggested PR title:
+
+```txt
+feat(fr): add French translations
+```
+
+### Updating an existing language
+
+1. Fork the repository.
+2. Create a branch:
+
+```bash
+git checkout -b fix/de-translations
+````
+
+3. Edit the relevant files under `src/locales/<locale>`.
+4. Run checks:
+
+```bash
+npm run lint
+npm run typecheck
 npm run build
 ```
 
-## Publish
+5. Commit your changes:
 
 ```bash
-npm login
-npm run publish:public
+git commit -m "fix(de): improve German translations"
+```
+
+6. Push your branch and open a pull request:
+
+```bash
+git push origin fix/de-translations
+```
+
+Suggested PR title:
+
+```txt
+fix(de): improve German translations
 ```
