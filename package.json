@@ -21,6 +21,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./locales/en": {
+      "types": "./dist/locales/en.d.ts",
+      "import": "./dist/locales/en.js"
+    },
     "./locales/de": {
       "types": "./dist/locales/de.d.ts",
       "import": "./dist/locales/de.js"
