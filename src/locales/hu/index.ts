@@ -11,7 +11,7 @@ export { huThemeConfig } from './theme'
 
 export const hu = {
   label: 'Magyar',
-  lang: 'hu-HU',
+  lang: 'hu',
   link: '/hu/',
   themeConfig: huThemeConfig,
   search: {

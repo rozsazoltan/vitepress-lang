@@ -11,7 +11,7 @@ export { deThemeConfig } from './theme'
 
 export const de = {
   label: 'Deutsch',
-  lang: 'de-DE',
+  lang: 'de',
   link: '/de/',
   themeConfig: deThemeConfig,
   search: {
