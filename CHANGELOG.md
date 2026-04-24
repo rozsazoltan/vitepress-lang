@@ -16,5 +16,5 @@ No additional changes have been introduced at this time.
 - Everything!
 - Added support for English, German, and Hungarian languages
 
-[unreleased]: https://github.com/tailwindlabs/tailwindcss/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/tailwindlabs/tailwindcss/releases/tag/v0.1.0
+[unreleased]: https://github.com/rozsazoltan/vitepress-lang/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/rozsazoltan/vitepress-lang/releases/tag/v0.1.0
