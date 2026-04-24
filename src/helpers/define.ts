@@ -11,7 +11,7 @@ function isPlainObject(value: unknown): value is PlainObject {
   return Object.prototype.toString.call(value) === '[object Object]'
 }
 
-export function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
+function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
   if (!override) return { ...base }
 
   const output: PlainObject = { ...base }
