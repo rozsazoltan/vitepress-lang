@@ -6,6 +6,13 @@ Languages live under:
 src/locales/<locale>/
 ```
 
+- [Development setup](#development-setup)
+  - [Recommended: mise + hk](#recommended-mise--hk)
+  - [Manual (without automatic checks)](#manual-without-automatic-checks)
+- [Add a language](#add-a-language)
+- [Update a language](#update-a-language)
+- [Rules](#rules)
+
 ## Development setup
 
 ### Recommended: mise + hk
@@ -25,7 +32,7 @@ The project uses the experimental [aube](https://aube.en.dev) package manager:
 aube install
 ```
 
-### Manual (without pre-commit hook)
+### Manual (without automatic checks)
 
 ```sh
 npm install
