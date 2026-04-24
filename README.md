@@ -1,128 +1,136 @@
 # vitepress-lang
 
-Default VitePress UI translations for `themeConfig` and search.
+Default VitePress UI translations for the default theme and search.
 
-Included now:
+Included languages:
+
 - German (`de`)
 - Hungarian (`hu`)
 
-## Install
-
-Create a VitePress site and install the package.
+## Install from zero
 
 ```bash
-npm init
-npx vitepress init
+npm create vitepress@latest docs
+cd docs
 npm install vitepress-lang
 ```
 
-## Import one language
+## Use one language
 
-Use this if you only want one locale pack in your project.
+This example uses Hungarian as the root language of a minimal VitePress site.
 
 ```ts
-// docs/.vitepress/config.ts
+// .vitepress/config.ts
 import { defineConfig } from 'vitepress'
-import { createRootLocaleConfig } from 'vitepress-lang'
+import { defineRootLang } from 'vitepress-lang'
 
 export default defineConfig({
   title: 'My Docs',
-  description: 'Example site',
-  themeConfig: {
-    ...createRootLocaleConfig('de')
+  description: 'My VitePress site',
+
+  locales: {
+    ...defineRootLang('hu')
   }
 })
 ```
 
-You can also import a single locale file directly:
+Use a prefixed locale like this:
 
 ```ts
-// docs/.vitepress/config.ts
+// .vitepress/config.ts
 import { defineConfig } from 'vitepress'
-import { de } from 'vitepress-lang/locales/de'
+import { defineLang } from 'vitepress-lang'
 
 export default defineConfig({
   title: 'My Docs',
-  description: 'Example site',
-  themeConfig: {
-    ...de.themeConfig,
-    search: {
-      provider: 'local',
-      options: {
-        locales: {
-          root: de.search.local
-        }
-      }
-    }
-  }
-})
-```
+  description: 'My VitePress site',
 
-## Import all languages
-
-Use this if you want access to every bundled language.
-
-```ts
-// docs/.vitepress/config.ts
-import { defineConfig } from 'vitepress'
-import { localePacks } from 'vitepress-lang'
-
-export default defineConfig({
-  title: 'My Docs',
-  description: 'Example site',
   locales: {
     root: {
-      label: 'Deutsch',
-      lang: 'de',
-      themeConfig: {
-        ...localePacks.de.themeConfig,
-        search: {
-          provider: 'local',
-          options: {
-            locales: {
-              root: localePacks.de.search.local,
-              hu: localePacks.hu.search.local
-            }
-          }
-        }
-      }
+      label: 'English',
+      lang: 'en-US'
     },
-    hu: {
-      label: 'Magyar',
-      lang: 'hu',
-      link: '/hu/',
-      themeConfig: {
-        ...localePacks.hu.themeConfig
-      }
-    }
+    ...defineLang('hu')
   }
 })
 ```
 
-Warning: if you wire every included language into your VitePress `locales` config, those locales will also appear in your language switcher.
+This creates a `hu` locale entry with Hungarian default theme and local-search translations.
 
-## API
-
-### Main exports
+## Use all bundled languages
 
 ```ts
-import {
-  de,
-  hu,
-  localePacks,
-  getLocalePack,
-  createRootLocaleConfig,
-  createNamedLocaleConfig,
-  createAlgoliaRootLocaleConfig,
-  createAlgoliaNamedLocaleConfig
-} from 'vitepress-lang'
+// .vitepress/config.ts
+import { defineConfig } from 'vitepress'
+import { defineAllLangs } from 'vitepress-lang'
+
+export default defineConfig({
+  title: 'My Docs',
+  description: 'My VitePress site',
+
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en-US'
+    },
+    ...defineAllLangs()
+  }
+})
 ```
 
-### Direct locale imports
+Warning: every locale added to VitePress `locales` can appear in the default theme language switcher. Only import all bundled languages if you really want all of them listed.
+
+## Use selected languages
 
 ```ts
-import { de } from 'vitepress-lang/locales/de'
-import { hu } from 'vitepress-lang/locales/hu'
+// .vitepress/config.ts
+import { defineConfig } from 'vitepress'
+import { defineLangs } from 'vitepress-lang'
+
+export default defineConfig({
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en-US'
+    },
+    ...defineLangs(['de', 'hu'])
+  }
+})
+```
+
+## Direct locale imports
+
+Use direct imports if you only want the raw locale data.
+
+```ts
+import { hu } from 'vitepress-lang/hu'
+import { de } from 'vitepress-lang/de'
+```
+
+The detailed folder exports are also available:
+
+```ts
+import { huThemeConfig, huLocalSearch } from 'vitepress-lang/locales/hu'
+import { deThemeConfig, deLocalSearch } from 'vitepress-lang/locales/de'
+```
+
+## Algolia search
+
+By default, helpers generate local-search config. Use `searchProvider: 'algolia'` for Algolia translations.
+
+```ts
+import { defineConfig } from 'vitepress'
+import { defineLang } from 'vitepress-lang'
+
+export default defineConfig({
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en-US'
+    },
+    ...defineLang('de', { searchProvider: 'algolia' })
+  }
+})
 ```
 
 ## Development
@@ -138,31 +146,23 @@ npm run build
 
 ### Add a new language
 
-1. Create a new file in `src/locales/`, for example `src/locales/fr.ts`.
-2. Copy an existing locale file such as `src/locales/de.ts`.
-3. Translate all fields in:
-   - `themeConfig`
-   - local search
-   - Algolia search
-   - Ask AI side panel
-4. Export the final locale pack as:
-
-```ts
-export const fr: VitePressLocalePack = {
-  themeConfig: frThemeConfig,
-  search: {
-    local: { translations: frLocalSearch },
-    algolia: { translations: frAlgoliaSearch },
-    askAi: { sidePanel: frAskAiSidePanel }
-  }
-}
-```
-
-5. Add the exports to `src/locales/index.ts`.
-6. Update `SupportedLocale` in `src/types.ts`.
+1. Create a new locale folder, for example `src/locales/fr/`.
+2. Copy the files from `src/locales/de/` or `src/locales/hu/`:
+   - `meta.ts`
+   - `theme.ts`
+   - `local-search.ts`
+   - `algolia-search.ts`
+   - `ask-ai-side-panel.ts`
+   - `index.ts`
+3. Rename the exported symbols from the copied language code to the new one, for example `deThemeConfig` -> `frThemeConfig`.
+4. Translate every string. Keep the object shapes unchanged.
+5. Add the new language code to `SupportedLocale` in `src/types.ts`.
+6. Export the new locale from `src/locales/index.ts`.
 7. Add the new locale to `localePacks` in `src/helpers/create-config.ts`.
-8. Add a new subpath export in `package.json` if you want direct imports like `vitepress-lang/locales/fr`.
-9. Run:
+8. Add a top-level file like `src/fr.ts` if direct imports should work.
+9. Add package subpath exports in `package.json`, for example `./fr` and `./locales/fr`.
+10. Add the new entry points to `rolldown.config.mjs`.
+11. Run the checks:
 
 ```bash
 npm run lint
@@ -172,10 +172,10 @@ npm run build
 
 ### Update an existing language
 
-1. Edit the relevant file in `src/locales/`.
-2. Keep the object shape unchanged.
+1. Edit the relevant files in `src/locales/<locale>/`.
+2. Keep all keys and nesting unchanged.
 3. Run lint, typecheck, and build.
-4. Open a PR with a short summary of what changed.
+4. Open a PR with a short summary of the wording changes.
 
 ### Submit a PR
 
@@ -185,11 +185,13 @@ npm install
 npm run lint
 npm run typecheck
 npm run build
-git commit -am "Add French locale"
+git add .
+git commit -m "Add French locale"
 git push origin feat/add-fr-locale
 ```
 
-Then open a pull request and include:
+In the PR description, include:
+
 - the language code
-- whether it is a new locale or an update
-- any wording choices that may need review
+- whether this is a new locale or an update
+- any wording decisions that need review

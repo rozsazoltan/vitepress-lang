@@ -1,1 +1,1 @@
-export { default, hu, huThemeConfig, huLocalSearch, huAlgoliaSearch, huAskAiSidePanel } from './locales/hu'
+export { default, hu, huAlgoliaSearch, huAskAiSidePanel, huLocalSearch, huMeta, huThemeConfig } from './locales/hu'

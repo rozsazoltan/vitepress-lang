@@ -1,1 +1,1 @@
-export { default, de, deThemeConfig, deLocalSearch, deAlgoliaSearch, deAskAiSidePanel } from './locales/de'
+export { default, de, deAlgoliaSearch, deAskAiSidePanel, deLocalSearch, deMeta, deThemeConfig } from './locales/de'

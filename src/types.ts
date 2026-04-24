@@ -1,5 +1,7 @@
 export type SupportedLocale = 'de' | 'hu'
 
+export type SearchProvider = 'local' | 'algolia'
+
 export interface DefaultThemeLocaleConfig {
   outline: {
     label: string
@@ -180,6 +182,9 @@ export interface AlgoliaAskAiSidePanelTranslations {
 }
 
 export interface VitePressLocalePack {
+  label: string
+  lang: string
+  link: string
   themeConfig: DefaultThemeLocaleConfig
   search: {
     local: {
@@ -190,6 +195,28 @@ export interface VitePressLocalePack {
     }
     askAi: {
       sidePanel: AlgoliaAskAiSidePanelTranslations
+    }
+  }
+}
+
+export interface DefineLangOptions {
+  key?: string
+  label?: string
+  lang?: string
+  link?: string
+  searchProvider?: SearchProvider
+}
+
+export interface VitePressGeneratedLocaleConfig {
+  label: string
+  lang: string
+  link?: string
+  themeConfig: DefaultThemeLocaleConfig & {
+    search: {
+      provider: SearchProvider
+      options: {
+        locales: Record<string, unknown>
+      }
     }
   }
 }

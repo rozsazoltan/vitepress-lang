@@ -1,15 +1,2 @@
-export {
-  de,
-  deThemeConfig,
-  deLocalSearch,
-  deAlgoliaSearch,
-  deAskAiSidePanel
-} from './de'
-
-export {
-  hu,
-  huThemeConfig,
-  huLocalSearch,
-  huAlgoliaSearch,
-  huAskAiSidePanel
-} from './hu'
+export { de, deAlgoliaSearch, deAskAiSidePanel, deLocalSearch, deMeta, deThemeConfig } from './de'
+export { hu, huAlgoliaSearch, huAskAiSidePanel, huLocalSearch, huMeta, huThemeConfig } from './hu'
