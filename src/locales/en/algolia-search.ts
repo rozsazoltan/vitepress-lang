@@ -1,6 +1,6 @@
 import type { AlgoliaSearchTranslations } from '../../types'
 
-export const enAlgoliaSearch: AlgoliaSearchTranslations = {
+export default {
   button: {
     buttonText: 'Search',
     buttonAriaLabel: 'Search'
@@ -83,4 +83,4 @@ export const enAlgoliaSearch: AlgoliaSearchTranslations = {
       startNewConversationButtonText: 'Start new conversation'
     }
   }
-}
+} satisfies AlgoliaSearchTranslations

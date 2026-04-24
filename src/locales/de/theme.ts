@@ -1,6 +1,6 @@
 import type { DefaultThemeLocaleConfig } from '../../types'
 
-export const deThemeConfig: DefaultThemeLocaleConfig = {
+export default {
   outline: { label: 'Auf dieser Seite' },
   docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' },
   editLink: { text: 'Diese Seite auf GitHub bearbeiten' },
@@ -12,4 +12,4 @@ export const deThemeConfig: DefaultThemeLocaleConfig = {
   returnToTopLabel: 'Zurück nach oben',
   langMenuLabel: 'Sprache ändern',
   skipToContentLabel: 'Zum Inhalt springen'
-}
+} satisfies DefaultThemeLocaleConfig

@@ -1,22 +1,17 @@
 import type { VitePressLocalePack } from '../../types'
-import { huAskAiSidePanel } from './ask-ai'
-import { huAlgoliaSearch } from './algolia-search'
-import { huLocalSearch } from './local-search'
-import { huThemeConfig } from './theme'
-
-export { huAskAiSidePanel } from './ask-ai'
-export { huAlgoliaSearch } from './algolia-search'
-export { huLocalSearch } from './local-search'
-export { huThemeConfig } from './theme'
+import themeConfig from './theme'
+import localSearch from './local-search'
+import algoliaSearch from './algolia-search'
+import askAiSidePanel from './ask-ai'
 
 export const hu = {
   label: 'Magyar',
   lang: 'hu',
   link: '/hu/',
-  themeConfig: huThemeConfig,
+  themeConfig: themeConfig,
   search: {
-    local: huLocalSearch,
-    algolia: huAlgoliaSearch,
-    askAi: huAskAiSidePanel
+    local: { translations: localSearch },
+    algolia: { translations: algoliaSearch },
+    askAi: { sidePanel: askAiSidePanel }
   }
 } satisfies VitePressLocalePack

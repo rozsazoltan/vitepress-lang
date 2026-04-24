@@ -1,6 +1,6 @@
 import type { DefaultThemeLocaleConfig } from '../../types'
 
-export const huThemeConfig: DefaultThemeLocaleConfig = {
+export default {
   outline: { label: 'Ezen az oldalon' },
   docFooter: { prev: 'Előző oldal', next: 'Következő oldal' },
   editLink: { text: 'Oldal szerkesztése GitHubon' },
@@ -12,4 +12,4 @@ export const huThemeConfig: DefaultThemeLocaleConfig = {
   returnToTopLabel: 'Vissza az elejére',
   langMenuLabel: 'Nyelv módosítása',
   skipToContentLabel: 'Ugrás a tartalomra'
-}
+} satisfies DefaultThemeLocaleConfig

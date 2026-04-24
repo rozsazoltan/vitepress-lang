@@ -1,6 +1,6 @@
 import type { LocalSearchTranslations } from '../../types'
 
-export const enLocalSearch: LocalSearchTranslations = {
+export default {
   button: {
     buttonText: 'Search',
     buttonAriaLabel: 'Search'
@@ -20,4 +20,4 @@ export const enLocalSearch: LocalSearchTranslations = {
       closeKeyAriaLabel: 'Esc'
     }
   }
-}
+} satisfies LocalSearchTranslations

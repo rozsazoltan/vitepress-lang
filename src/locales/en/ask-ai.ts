@@ -1,6 +1,6 @@
 import type { AlgoliaAskAiSidePanelTranslations } from '../../types'
 
-export const enAskAiSidePanel: AlgoliaAskAiSidePanelTranslations = {
+export default {
   button: {
     translations: {
       buttonText: 'Ask AI',
@@ -49,4 +49,4 @@ export const enAskAiSidePanel: AlgoliaAskAiSidePanelTranslations = {
       }
     }
   }
-}
+} satisfies AlgoliaAskAiSidePanelTranslations

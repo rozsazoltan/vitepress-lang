@@ -1,6 +1,6 @@
 import type { DefaultThemeLocaleConfig } from '../../types'
 
-export const enThemeConfig: DefaultThemeLocaleConfig = {
+export default {
   outline: {
     label: 'On this page'
   },
@@ -21,4 +21,4 @@ export const enThemeConfig: DefaultThemeLocaleConfig = {
   returnToTopLabel: 'Back to top',
   langMenuLabel: 'Change language',
   skipToContentLabel: 'Skip to content'
-}
+} satisfies DefaultThemeLocaleConfig

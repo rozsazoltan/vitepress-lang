@@ -1,20 +1,17 @@
 import type { VitePressLocalePack } from '../../types'
+import themeConfig from './theme'
+import localSearch from './local-search'
+import algoliaSearch from './algolia-search'
+import askAiSidePanel from './ask-ai'
 
-import { enThemeConfig } from './theme'
-import { enLocalSearch } from './local-search'
-import { enAlgoliaSearch } from './algolia-search'
-import { enAskAiSidePanel } from './ask-ai'
-
-export const en: VitePressLocalePack = {
+export const en = {
   label: 'English',
   lang: 'en',
   link: '/en/',
-
-  themeConfig: enThemeConfig,
-
+  themeConfig: themeConfig,
   search: {
-    local: { translations: enLocalSearch },
-    algolia: { translations: enAlgoliaSearch },
-    askAi: { sidePanel: enAskAiSidePanel }
+    local: { translations: localSearch },
+    algolia: { translations: algoliaSearch },
+    askAi: { sidePanel: askAiSidePanel }
   }
-}
+} satisfies VitePressLocalePack
