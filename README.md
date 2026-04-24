@@ -1,29 +1,38 @@
 # vitepress-lang
 
-Default VitePress UI translations for the default theme.
+`vitepress-lang` provides ready-to-use UI translations for the VitePress default theme.
 
-Currently included languages:
+It translates VitePress default theme labels, local search UI, Algolia search UI, and Ask AI UI strings.
 
-- German: `de`
-- Hungarian: `hu`
+|Available|Status|
+|:---|---:|
+|Deutsch|100%|
+|Hungarian|100%|
 
-## Install
+- [Get started](#get-started)
+- [Usage](#usage)
+  - [Algolia search](#algolia-search)
+  - [Custom locale key](#custom-locale-key)
+  - [Raw language packs](#raw-language-packs)
+- [Contributing](#contributing)
+
+## Get started
 
 Create a VitePress project:
 
-```bash
+```sh
 npm create vitepress@latest
+````
+
+Install `vitepress-lang`:
+
+```sh
+npm install -D vitepress-lang
 ```
 
-Install this package:
+## Usage
 
-```bash
-npm install vitepress-lang
-```
-
-## Use one language
-
-`.vitepress/config.ts`:
+Use `defineLangConfig()` inside `.vitepress/config.ts`. The helper deep-merges the built-in translation pack with your own VitePress locale config.
 
 ```ts
 import { defineConfig } from 'vitepress'
@@ -49,21 +58,8 @@ export default defineConfig({
       themeConfig: {
         nav: [{ text: 'Startseite', link: '/de/' }]
       }
-    })
-  }
-})
-```
+    }),
 
-`defineLangConfig()` deep-merges the built-in VitePress UI translations with your own locale config.
-
-## Hungarian example
-
-```ts
-import { defineConfig } from 'vitepress'
-import { defineLangConfig } from 'vitepress-lang'
-
-export default defineConfig({
-  locales: {
     hu: defineLangConfig('hu', {
       title: 'Dokumentáció',
       description: 'Magyar dokumentáció',
@@ -75,9 +71,11 @@ export default defineConfig({
 })
 ```
 
-## Algolia search
+### Algolia search
 
-Local search is used by default. For Algolia, pass `searchProvider: 'algolia'`:
+Local search is used by default.
+
+For Algolia, pass `searchProvider: 'algolia'`:
 
 ```ts
 de: defineLangConfig(
@@ -91,9 +89,11 @@ de: defineLangConfig(
 )
 ```
 
-## Custom locale key
+### Custom locale key
 
-If your VitePress locale key is not the same as the language code, use `localeKey`:
+If your VitePress locale key is not the same as the language code, use `localeKey`.
+
+This is useful for `root` locales:
 
 ```ts
 root: defineLangConfig(
@@ -109,100 +109,27 @@ root: defineLangConfig(
 )
 ```
 
-## Import raw language packs
+### Raw language packs
 
-```ts
-import { de, hu } from 'vitepress-lang'
-```
-
-Or import one pack directly:
+It is also possible to access the RAW language data, allowing you to work with it before use.
 
 ```ts
 import { de } from 'vitepress-lang/de'
 import { hu } from 'vitepress-lang/hu'
+// ...
 ```
+
+> [!WARNING]
+> Importing all language packs does not automatically register all VitePress locales, but if you spread or generate config from every pack, every language you include will appear in your VitePress language switcher.
 
 ## Contributing
 
-### Create a new language
+Language contributions are welcome.
 
-1. Fork the repository.
-2. Create a new branch:
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for adding a new language or improving an existing one.
 
-```bash
-git checkout -b feat/fr-language
-````
+## License & Acknowledgments
 
-3. Add a new folder under `src/locales`, for example `src/locales/fr`.
-4. Copy the files from an existing locale folder:
+This project would not exist without the creators and contributors of [VitePress](https://github.com/vuejs/vitepress). It is open source and released under the [GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.html).
 
-   * `theme.ts`
-   * `local-search.ts`
-   * `algolia-search.ts`
-   * `ask-ai.ts`
-   * `index.ts`
-5. Translate every string.
-6. Add the new locale code to `SupportedLocale` in `src/types.ts`.
-7. Export the locale from `src/locales/index.ts`.
-8. Add a subpath export to `package.json` if the language should be directly importable, for example `vitepress-lang/fr`.
-9. Run checks:
-
-```bash
-npm run lint
-npm run typecheck
-npm run build
-```
-
-10. Commit your changes with a clear Conventional Commit message, for example:
-
-```bash
-git commit -m "feat(fr): add French translations"
-```
-
-11. Push your branch and open a pull request:
-
-```bash
-git push origin feat/fr-language
-```
-
-Suggested PR title:
-
-```txt
-feat(fr): add French translations
-```
-
-### Updating an existing language
-
-1. Fork the repository.
-2. Create a branch:
-
-```bash
-git checkout -b fix/de-translations
-````
-
-3. Edit the relevant files under `src/locales/<locale>`.
-4. Run checks:
-
-```bash
-npm run lint
-npm run typecheck
-npm run build
-```
-
-5. Commit your changes:
-
-```bash
-git commit -m "fix(de): improve German translations"
-```
-
-6. Push your branch and open a pull request:
-
-```bash
-git push origin fix/de-translations
-```
-
-Suggested PR title:
-
-```txt
-fix(de): improve German translations
-```
+Copyright (C) 2020–present [Zoltán Rózsa](https://github.com/rozsazoltan)
