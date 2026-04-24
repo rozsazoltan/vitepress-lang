@@ -1,4 +1,4 @@
-export type SupportedLocale = 'de' | 'hu'
+export type SupportedLocale = 'en' | 'de' | 'hu'
 export type SearchProvider = 'local' | 'algolia'
 
 export interface LocaleMeta {
