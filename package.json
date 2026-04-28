@@ -21,10 +21,6 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    },
-    "./locales": {
-      "types": "./dist/locales/index.d.ts",
-      "import": "./dist/locales/index.js"
     }
   },
   "files": [
