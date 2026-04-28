@@ -66,7 +66,7 @@ export default {
       stoppedStreamingText: 'Sie haben diese Antwort gestoppt',
     },
     footer: {
-      selectText: 'Auswählen',
+      selectText: 'auswählen',
       submitQuestionText: 'Frage einreichen',
       selectKeyAriaLabel: 'Eingabetaste',
       navigateText: 'Navigieren',

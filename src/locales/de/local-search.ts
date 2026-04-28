@@ -11,13 +11,13 @@ export default {
     backButtonTitle: 'Suche schließen',
     noResultsText: 'Keine Ergebnisse für',
     footer: {
-      selectText: 'Auswählen',
-      selectKeyAriaLabel: 'Eingabetaste',
+      selectText: 'auswählen',
+      selectKeyAriaLabel: 'enter',
       navigateText: 'navigieren',
       navigateUpKeyAriaLabel: 'Pfeil nach oben',
       navigateDownKeyAriaLabel: 'Pfeil nach unten',
       closeText: 'schließen',
-      closeKeyAriaLabel: 'Esc'
+      closeKeyAriaLabel: 'esc'
     }
   }
 } satisfies LocalSearchTranslations
