@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-export type SupportedLocale = 'de' | 'en' | 'es' | 'hu'
+export type SupportedLocale = 'de' | 'en' | 'es' | 'fr' | 'hu'
 export type SearchProvider = 'local' | 'algolia'
 
 export interface LocaleMeta {
