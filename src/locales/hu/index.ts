@@ -4,7 +4,7 @@ import localSearch from './local-search'
 import algoliaSearch from './algolia-search'
 import askAiSidePanel from './ask-ai'
 
-export const hu = {
+export default {
   label: 'Magyar',
   lang: 'hu',
   link: '/hu/',

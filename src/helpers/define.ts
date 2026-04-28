@@ -1,8 +1,10 @@
+import type { DefaultTheme } from 'vitepress'
 import { localePacks } from '../locales'
 import type {
   DefineLangConfigOptions,
   LocaleConfigOverride,
   PlainObject,
+  SearchConfig,
   SearchProvider,
   SupportedLocale
 } from '../types'
@@ -30,7 +32,7 @@ function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
   return output as T
 }
 
-function createSearchConfig(locale: SupportedLocale, localeKey: string, provider: SearchProvider): PlainObject {
+function createSearchConfig(locale: SupportedLocale, localeKey: string, provider: SearchProvider): SearchConfig {
   const pack = localePacks[locale]
 
   if (provider === 'algolia') {
@@ -66,7 +68,7 @@ export function defineLangConfig(
   const localeKey = options.localeKey ?? locale
   const searchProvider = options.searchProvider ?? 'local'
 
-  const baseConfig = {
+  const baseConfig: Partial<LocaleConfigOverride> = {
     label: pack.label,
     lang: pack.lang,
     link: pack.link,
@@ -76,5 +78,11 @@ export function defineLangConfig(
     }
   }
 
-  return deepMerge(baseConfig, override)
+  const merged = deepMerge<typeof override>(baseConfig, override)
+
+  if (merged.themeConfig!.editLink!.pattern === 'UNDEFINED') {
+    delete merged!.themeConfig!.editLink
+  }
+
+  return merged
 }

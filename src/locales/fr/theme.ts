@@ -2,10 +2,10 @@ import type { ThemeConfig } from '../../types'
 
 export default {
   notFound: {
-    title: 'PAGE NOT FOUND',
-    quote: "But if you don't change your direction, and if you keep looking, you may end up where you are heading.",
-    linkLabel: 'go to home',
-    linkText: 'Take me home'
+    title: "PAGE INTROUVABLE",
+    quote: "La page n'existe pas, veuillez vérifier l'URL.",
+    linkLabel: "Retour à l'accueil",
+    linkText: "Retour à l'accueil",
   },
 
   footer: {
@@ -13,26 +13,26 @@ export default {
     // copyright: "...",
   },
   docFooter: {
-    prev: 'Previous page',
-    next: 'Next page'
+    prev: 'Précédent',
+    next: 'Suivant'
   },
 
   outline: {
-    label: 'On this page'
+    label: 'Sur cette page'
   },
   editLink: {
     pattern: 'UNDEFINED',
-    text: 'Suggest edits to this page'
+    text: 'Suggérer des modifications à cette page'
   },
   lastUpdated: {
-    text: 'Last updated'
+    text: 'Dernière mise à jour'
   },
 
   langMenuLabel: 'Change Language',
-  returnToTopLabel: 'Return to top',
-  sidebarMenuLabel: 'Sidebar Menu',
-  darkModeSwitchLabel: 'Dark Theme',
-  lightModeSwitchTitle: 'Switch to light mode',
-  darkModeSwitchTitle: 'Switch to dark mode',
+  returnToTopLabel: 'Retour en haut',
+  sidebarMenuLabel: 'Sommaire',
+  darkModeSwitchLabel: 'Changer de mode',
+  lightModeSwitchTitle: 'Passer en mode clair',
+  darkModeSwitchTitle: 'Passer en mode sombre',
   skipToContentLabel: 'Skip to content',
 } satisfies ThemeConfig

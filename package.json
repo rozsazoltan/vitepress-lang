@@ -5,7 +5,8 @@
     "@types/node": "^24.0.0",
     "oxlint": "^1.61.0",
     "rolldown": "^1.0.0-rc.17",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "vitepress": "^2.0.0-alpha.17"
   },
   "scripts": {
     "build": "rolldown -c && tsc --emitDeclarationOnly",
@@ -20,18 +21,6 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    },
-    "./locales/en": {
-      "types": "./dist/locales/en.d.ts",
-      "import": "./dist/locales/en.js"
-    },
-    "./locales/de": {
-      "types": "./dist/locales/de.d.ts",
-      "import": "./dist/locales/de.js"
-    },
-    "./locales/hu": {
-      "types": "./dist/locales/hu.d.ts",
-      "import": "./dist/locales/hu.js"
     }
   },
   "files": [

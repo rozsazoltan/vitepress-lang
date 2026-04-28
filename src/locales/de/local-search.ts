@@ -1,20 +1,23 @@
 import type { LocalSearchTranslations } from '../../types'
 
 export default {
-  button: { buttonText: 'Suche', buttonAriaLabel: 'Suche' },
+  button: {
+    buttonText: 'Suchen',
+    buttonAriaLabel: 'Suchen'
+  },
   modal: {
     displayDetails: 'Detaillierte Liste anzeigen',
     resetButtonTitle: 'Suche zurücksetzen',
     backButtonTitle: 'Suche schließen',
-    noResultsText: 'Keine Ergebnisse',
+    noResultsText: 'Keine Ergebnisse für',
     footer: {
-      selectText: 'Auswählen',
-      selectKeyAriaLabel: 'Enter',
-      navigateText: 'Navigieren',
+      selectText: 'auswählen',
+      selectKeyAriaLabel: 'enter',
+      navigateText: 'navigieren',
       navigateUpKeyAriaLabel: 'Pfeil nach oben',
       navigateDownKeyAriaLabel: 'Pfeil nach unten',
-      closeText: 'Schließen',
-      closeKeyAriaLabel: 'Esc'
+      closeText: 'schließen',
+      closeKeyAriaLabel: 'esc'
     }
   }
 } satisfies LocalSearchTranslations

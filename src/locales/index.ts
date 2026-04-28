@@ -1,14 +1,16 @@
 import type { SupportedLocale, VitePressLocalePack } from '../types'
-import { en } from './en'
-import { de } from './de'
-import { hu } from './hu'
 
-export { en } from './en'
-export { de } from './de'
-export { hu } from './hu'
+import de from './de'
+import en from './en'
+import es from './es'
+import fr from './fr'
+import hu from './hu'
 
+export { de, en, es, fr, hu }
 export const localePacks = {
-  en,
   de,
-  hu
+  en,
+  es,
+  fr,
+  hu,
 } satisfies Record<SupportedLocale, VitePressLocalePack>

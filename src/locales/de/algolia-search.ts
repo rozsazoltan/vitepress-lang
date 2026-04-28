@@ -1,44 +1,28 @@
 import type { AlgoliaSearchTranslations } from '../../types'
 
 export default {
-  button: { buttonText: 'Suche', buttonAriaLabel: 'Suche' },
+  button: {
+    buttonText: 'Suchen',
+    buttonAriaLabel: 'Suchen',
+  },
   modal: {
     searchBox: {
       clearButtonTitle: 'Löschen',
       clearButtonAriaLabel: 'Suchanfrage löschen',
       closeButtonText: 'Schließen',
       closeButtonAriaLabel: 'Schließen',
-      placeholderText: 'Dokumentation durchsuchen oder KI fragen',
-      placeholderTextAskAi: 'Noch eine Frage stellen...',
-      placeholderTextAskAiStreaming: 'Antwort wird erstellt...',
-      searchInputLabel: 'Suche',
+      placeholderText: undefined,
+      placeholderTextAskAi: undefined,
+      placeholderTextAskAiStreaming: 'Wird beantwortet...',
+      enterKeyHint: 'search',
+      enterKeyHintAskAi: 'enter',
+      searchInputLabel: 'Suchen',
       backToKeywordSearchButtonText: 'Zurück zur Stichwortsuche',
       backToKeywordSearchButtonAriaLabel: 'Zurück zur Stichwortsuche',
       newConversationPlaceholder: 'Frage stellen',
-      conversationHistoryTitle: 'Meine Gesprächsverläufe',
-      startNewConversationText: 'Neue Unterhaltung starten',
-      viewConversationHistoryText: 'Verlauf anzeigen',
-      threadDepthErrorPlaceholder: 'Konversationslimit erreicht'
-    },
-    newConversation: {
-      newConversationTitle: 'Wie kann ich heute helfen?',
-      newConversationDescription: 'Ich durchsuche deine Dokumentation und helfe dir schnell bei Einrichtungsanleitungen, Funktionsdetails und Hinweisen zur Fehlerbehebung.'
-    },
-    footer: {
-      selectText: 'Auswählen',
-      submitQuestionText: 'Frage absenden',
-      selectKeyAriaLabel: 'Enter',
-      navigateText: 'Navigieren',
-      navigateUpKeyAriaLabel: 'Pfeil nach oben',
-      navigateDownKeyAriaLabel: 'Pfeil nach unten',
-      closeText: 'Schließen',
-      backToSearchText: 'Zurück zur Suche',
-      closeKeyAriaLabel: 'Esc',
-      poweredByText: 'Bereitgestellt von'
-    },
-    errorScreen: {
-      titleText: 'Ergebnisse konnten nicht geladen werden',
-      helpText: 'Bitte überprüfe deine Netzwerkverbindung.'
+      conversationHistoryTitle: 'Mein Gesprächsverlauf',
+      startNewConversationText: 'Neues Gespräch beginnen',
+      viewConversationHistoryText: 'Gesprächsverlauf',
     },
     startScreen: {
       recentSearchesTitle: 'Zuletzt gesucht',
@@ -47,21 +31,25 @@ export default {
       removeRecentSearchButtonTitle: 'Diese Suche aus dem Verlauf entfernen',
       favoriteSearchesTitle: 'Favoriten',
       removeFavoriteSearchButtonTitle: 'Diese Suche aus den Favoriten entfernen',
-      recentConversationsTitle: 'Letzte Unterhaltungen',
-      removeRecentConversationButtonTitle: 'Diese Unterhaltung aus dem Verlauf entfernen'
+      recentConversationsTitle: 'Letzte Gespräche',
+      removeRecentConversationButtonTitle: 'Dieses Gespräch aus dem Verlauf entfernen',
+    },
+    errorScreen: {
+      titleText: 'Ergebnisse konnten nicht abgerufen werden',
+      helpText: 'Möglicherweise möchten Sie Ihre Netzwerkverbindung überprüfen.',
     },
     noResultsScreen: {
-      noResultsText: 'Keine passenden Ergebnisse',
-      suggestedQueryText: 'Versuche es mit',
-      reportMissingResultsText: 'Sollte es dafür Ergebnisse geben?',
-      reportMissingResultsLinkText: 'Sag es uns.'
+      noResultsText: 'Keine Ergebnisse gefunden für',
+      suggestedQueryText: 'Versuche zu suchen nach',
+      reportMissingResultsText: 'Glauben Sie, diese Anfrage sollte Ergebnisse liefern?',
+      reportMissingResultsLinkText: 'Teilen Sie es uns mit.',
     },
     resultsScreen: {
-      askAiPlaceholder: 'KI fragen:',
-      noResultsAskAiPlaceholder: 'Nichts in der Doku gefunden? Frag Ask AI:'
+      askAiPlaceholder: 'KI fragen: ',
+      noResultsAskAiPlaceholder: 'In den Docs nicht gefunden? Lass die KI helfen: ',
     },
     askAiScreen: {
-      disclaimerText: 'Die Antwort wurde von KI generiert und kann Fehler enthalten. Bitte prüfe sie.',
+      disclaimerText: 'Antworten werden mit KI generiert, die Fehler machen kann. Bitte Antworten überprüfen.',
       relatedSourcesText: 'Verwandte Quellen',
       thinkingText: 'Denkt nach...',
       copyButtonText: 'Kopieren',
@@ -69,14 +57,29 @@ export default {
       copyButtonTitle: 'Kopieren',
       likeButtonTitle: 'Gefällt mir',
       dislikeButtonTitle: 'Gefällt mir nicht',
-      thanksForFeedbackText: 'Danke für dein Feedback!',
+      thanksForFeedbackText: 'Danke für Ihr Feedback!',
       preToolCallText: 'Suche läuft...',
-      duringToolCallText: 'Suche läuft...',
-      afterToolCallText: 'Suche abgeschlossen',
-      stoppedStreamingText: 'Du hast diese Antwort gestoppt',
-      errorTitleText: 'Chat-Fehler',
-      threadDepthExceededMessage: 'Diese Unterhaltung wurde beendet, damit die Antworten präzise bleiben.',
-      startNewConversationButtonText: 'Neue Unterhaltung starten'
+      duringToolCallText: 'Suche nach ',
+      afterToolCallText: 'Gesucht nach',
+      aggregatedToolCallNode: undefined,
+      aggregatedToolCallText: undefined,
+      stoppedStreamingText: 'Sie haben diese Antwort gestoppt',
+    },
+    footer: {
+      selectText: 'auswählen',
+      submitQuestionText: 'Frage einreichen',
+      selectKeyAriaLabel: 'Eingabetaste',
+      navigateText: 'Navigieren',
+      navigateUpKeyAriaLabel: 'Pfeil nach oben',
+      navigateDownKeyAriaLabel: 'Pfeil nach unten',
+      closeText: 'Schließen',
+      backToSearchText: 'Zurück zur Suche',
+      closeKeyAriaLabel: 'Escape-Taste',
+      poweredByText: 'Bereitgestellt von',
+    },
+    newConversation: {
+      newConversationTitle: 'Wie kann ich Ihnen heute helfen?',
+      newConversationDescription: 'Ich durchsuche Ihre Dokumentation, um Ihnen schnell Setup-Anleitungen, Funktionsdetails und Tipps zur Fehlerbehebung zu finden.'
     }
-  }
+  },
 } satisfies AlgoliaSearchTranslations

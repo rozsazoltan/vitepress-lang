@@ -75,7 +75,7 @@ export default {
       afterToolCallText: 'Keresés kész',
       stoppedStreamingText: 'Leállítottad ezt a választ',
       errorTitleText: 'Csevegési hiba',
-      threadDepthExceededMessage: 'A beszélgetés lezárult, hogy a válaszok pontosak maradjanak.',
+      // threadDepthExceededMessage: 'A beszélgetés lezárult, hogy a válaszok pontosak maradjanak.',
       startNewConversationButtonText: 'Új beszélgetés indítása'
     }
   }

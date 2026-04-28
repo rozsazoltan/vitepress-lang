@@ -5,13 +5,13 @@ import algoliaSearch from './algolia-search'
 import askAiSidePanel from './ask-ai'
 
 export default {
-  label: 'English',
-  lang: 'en',
-  link: '/en/',
+  label: 'Español',
+  lang: 'es',
+  link: '/es/',
   themeConfig: themeConfig,
   search: {
     local: { translations: localSearch },
     algolia: { translations: algoliaSearch },
-    askAi: { sidePanel: askAiSidePanel },
-  },
+    askAi: { sidePanel: askAiSidePanel }
+  }
 } satisfies VitePressLocalePack
