@@ -6,6 +6,7 @@ It translates VitePress default theme labels, local search UI, Algolia search UI
 
 |Available|Status|
 |:---|---:|
+| | |
 |(en) English (source)|100%|
 | | |
 |(de) Deutsch|100%|
