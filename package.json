@@ -22,17 +22,9 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./locales/en": {
-      "types": "./dist/locales/en.d.ts",
-      "import": "./dist/locales/en.js"
-    },
-    "./locales/de": {
-      "types": "./dist/locales/de.d.ts",
-      "import": "./dist/locales/de.js"
-    },
-    "./locales/hu": {
-      "types": "./dist/locales/hu.d.ts",
-      "import": "./dist/locales/hu.js"
+    "./locales": {
+      "types": "./dist/locales/index.d.ts",
+      "import": "./dist/locales/index.js"
     }
   },
   "files": [

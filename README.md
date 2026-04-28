@@ -8,6 +8,7 @@ It translates VitePress default theme labels, local search UI, Algolia search UI
 |:---|---:|
 |English (source)|100%|
 |Deutsch|100%|
+|Spanish|100%|
 |Hungarian|100%|
 
 - [Get started](#get-started)
