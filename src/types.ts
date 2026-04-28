@@ -1,7 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
 export type SupportedLocale = 'de' | 'en' | 'es' | 'fr' | 'hu'
-export type SearchProvider = 'local' | 'algolia'
 
 export interface LocaleMeta {
   label: string
@@ -10,6 +9,8 @@ export interface LocaleMeta {
 }
 
 export type ThemeConfig = DefaultTheme.Config
+export type SearchConfig = ThemeConfig['search']
+export type SearchProvider = 'local' | 'algolia'
 export type LocalSearchTranslations = NonNullable<DefaultTheme.LocalSearchOptions['translations']>
 export type AlgoliaSearchTranslations = NonNullable<DefaultTheme.AlgoliaSearchOptions['translations']>
 type AskAiObject = Extract<

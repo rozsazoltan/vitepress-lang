@@ -4,6 +4,7 @@ import type {
   DefineLangConfigOptions,
   LocaleConfigOverride,
   PlainObject,
+  SearchConfig,
   SearchProvider,
   SupportedLocale
 } from '../types'
@@ -31,7 +32,7 @@ function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
   return output as T
 }
 
-function createSearchConfig(locale: SupportedLocale, localeKey: string, provider: SearchProvider): DefaultTheme.Config['search'] {
+function createSearchConfig(locale: SupportedLocale, localeKey: string, provider: SearchProvider): SearchConfig {
   const pack = localePacks[locale]
 
   if (provider === 'algolia') {
