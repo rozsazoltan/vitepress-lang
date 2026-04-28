@@ -4,7 +4,7 @@ import localSearch from './local-search'
 import algoliaSearch from './algolia-search'
 import askAiSidePanel from './ask-ai'
 
-export const en = {
+export default {
   label: 'English',
   lang: 'en',
   link: '/en/',
@@ -12,6 +12,6 @@ export const en = {
   search: {
     local: { translations: localSearch },
     algolia: { translations: algoliaSearch },
-    askAi: { sidePanel: askAiSidePanel }
-  }
+    askAi: { sidePanel: askAiSidePanel },
+  },
 } satisfies VitePressLocalePack

@@ -21,7 +21,7 @@ export default {
     label: 'On this page'
   },
   editLink: {
-    text: 'Suggest changes to this page'
+    text: 'Edit this page on GitHub'
   },
   lastUpdated: {
     text: 'Last updated'

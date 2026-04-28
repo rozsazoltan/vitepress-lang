@@ -14,7 +14,11 @@ export type ThemeConfig = Omit<DefaultTheme.Config, 'editLink'> & {
 }
 export type LocalSearchTranslations = NonNullable<DefaultTheme.LocalSearchOptions['translations']>
 export type AlgoliaSearchTranslations = NonNullable<DefaultTheme.AlgoliaSearchOptions['translations']>
-export type AlgoliaAskAiSidePanelTranslations = NonNullable<DefaultTheme.AlgoliaSearchOptions['askAi']>
+type AskAiObject = Extract<
+  NonNullable<DefaultTheme.AlgoliaSearchOptions['askAi']>,
+  object
+>;
+export type AlgoliaAskAiSidePanelTranslations = AskAiObject['sidePanel'];
 
 export interface VitePressLocalePack extends LocaleMeta {
   themeConfig: ThemeConfig

@@ -4,48 +4,48 @@ export default {
   button: {
     translations: {
       buttonText: 'KI fragen',
-      buttonAriaLabel: 'KI fragen'
-    }
+      buttonAriaLabel: 'KI fragen',
+    },
   },
   panel: {
     translations: {
       header: {
         title: 'KI fragen',
-        conversationHistoryTitle: 'Meine Gesprächsverläufe',
-        newConversationText: 'Neue Unterhaltung starten',
-        viewConversationHistoryText: 'Verlauf anzeigen'
+        conversationHistoryTitle: 'Mein Gesprächsverlauf',
+        newConversationText: 'Neues Gespräch beginnen',
+        viewConversationHistoryText: 'Gesprächsverlauf',
       },
       promptForm: {
         promptPlaceholderText: 'Frage stellen',
-        promptAnsweringText: 'Antwort wird erstellt...',
-        promptAskAnotherQuestionText: 'Noch eine Frage stellen',
-        promptDisclaimerText: 'Die Antwort wurde von KI generiert und kann Fehler enthalten.',
-        promptLabelText: 'Mit Enter senden, mit Shift+Enter Zeilenumbruch einfügen.',
-        promptAriaLabelText: 'Frageeingabe'
+        promptAnsweringText: 'Wird beantwortet...',
+        promptAskAnotherQuestionText: 'Weitere Frage stellen',
+        promptDisclaimerText: 'Antworten werden von KI generiert und können Fehler enthalten.',
+        promptLabelText: 'Enter zum Senden, Shift+Enter für eine neue Zeile.',
+        promptAriaLabelText: 'Prompt-Eingabe',
       },
       conversationScreen: {
         preToolCallText: 'Suche läuft...',
         searchingText: 'Suche läuft...',
-        toolCallResultText: 'Suche abgeschlossen',
-        conversationDisclaimer: 'Die Antwort wurde von KI generiert und kann Fehler enthalten. Bitte prüfe sie.',
+        toolCallResultText: 'Gesucht',
+        conversationDisclaimer: 'Antworten werden von KI generiert und können Fehler enthalten. Bitte überprüfen.',
         reasoningText: 'Analysiert...',
         thinkingText: 'Denkt nach...',
         relatedSourcesText: 'Verwandte Quellen',
-        stoppedStreamingText: 'Du hast diese Antwort gestoppt',
+        stoppedStreamingText: 'Sie haben diese Antwort gestoppt',
         copyButtonText: 'Kopieren',
         copyButtonCopiedText: 'Kopiert!',
         likeButtonTitle: 'Gefällt mir',
         dislikeButtonTitle: 'Gefällt mir nicht',
-        thanksForFeedbackText: 'Danke für dein Feedback!',
-        errorTitleText: 'Chat-Fehler'
+        thanksForFeedbackText: 'Danke für Ihr Feedback!',
+        errorTitleText: 'Chat-Fehler',
       },
       newConversationScreen: {
-        titleText: 'Wie kann ich heute helfen?',
-        introductionText: 'Ich durchsuche deine Dokumentation und helfe dir schnell bei Einrichtungsanleitungen, Funktionsdetails und Hinweisen zur Fehlerbehebung.'
+        titleText: 'Wie kann ich Ihnen heute helfen?',
+        introductionText: 'Ich durchsuche Ihre Dokumentation, um Ihnen schnell Setup-Anleitungen, Funktionsdetails und Tipps zur Fehlerbehebung zu finden.',
       },
       logo: {
-        poweredByText: 'Bereitgestellt von'
-      }
-    }
-  }
+        poweredByText: 'Bereitgestellt von',
+      },
+    },
+  },
 } satisfies AlgoliaAskAiSidePanelTranslations

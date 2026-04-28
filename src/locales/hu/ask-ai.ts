@@ -4,8 +4,8 @@ export default {
   button: {
     translations: {
       buttonText: 'Kérdezd az AI-t',
-      buttonAriaLabel: 'Kérdezd az AI-t'
-    }
+      buttonAriaLabel: 'Kérdezd az AI-t',
+    },
   },
   panel: {
     translations: {
@@ -13,7 +13,7 @@ export default {
         title: 'Kérdezd az AI-t',
         conversationHistoryTitle: 'Beszélgetési előzményeim',
         newConversationText: 'Új beszélgetés indítása',
-        viewConversationHistoryText: 'Előzmények megtekintése'
+        viewConversationHistoryText: 'Előzmények megtekintése',
       },
       promptForm: {
         promptPlaceholderText: 'Kérdés feltevése',
@@ -21,7 +21,7 @@ export default {
         promptAskAnotherQuestionText: 'Tegyél fel még egy kérdést',
         promptDisclaimerText: 'A választ AI generálta, és tartalmazhat hibákat.',
         promptLabelText: 'Küldés Enterrel, sortörés Shift+Enterrel.',
-        promptAriaLabelText: 'Kérdésmező'
+        promptAriaLabelText: 'Kérdésmező',
       },
       conversationScreen: {
         preToolCallText: 'Keresés folyamatban...',
@@ -37,15 +37,15 @@ export default {
         likeButtonTitle: 'Tetszik',
         dislikeButtonTitle: 'Nem tetszik',
         thanksForFeedbackText: 'Köszönjük a visszajelzést!',
-        errorTitleText: 'Csevegési hiba'
+        errorTitleText: 'Csevegési hiba',
       },
       newConversationScreen: {
         titleText: 'Miben segíthetek ma?',
-        introductionText: 'Átkutatom a dokumentációdat, és gyorsan segítek a beállítási útmutatókkal, funkcióleírásokkal és hibaelhárítási tippekkel.'
+        introductionText: 'Átkutatom a dokumentációdat, és gyorsan segítek a beállítási útmutatókkal, funkcióleírásokkal és hibaelhárítási tippekkel.',
       },
       logo: {
-        poweredByText: 'Működteti'
-      }
-    }
-  }
+        poweredByText: 'Működteti',
+      },
+    },
+  },
 } satisfies AlgoliaAskAiSidePanelTranslations

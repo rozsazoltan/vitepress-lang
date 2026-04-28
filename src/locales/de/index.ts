@@ -4,14 +4,14 @@ import localSearch from './local-search'
 import algoliaSearch from './algolia-search'
 import askAiSidePanel from './ask-ai'
 
-export const de = {
+export default {
   label: 'Deutsch',
   lang: 'de',
   link: '/de/',
- themeConfig: themeConfig,
-   search: {
-     local: { translations: localSearch },
-     algolia: { translations: algoliaSearch },
-     askAi: { sidePanel: askAiSidePanel }
-   }
+  themeConfig: themeConfig,
+  search: {
+    local: { translations: localSearch },
+    algolia: { translations: algoliaSearch },
+    askAi: { sidePanel: askAiSidePanel }
+  }
 } satisfies VitePressLocalePack
