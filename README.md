@@ -9,10 +9,10 @@ It translates VitePress default theme labels, local search UI, Algolia search UI
 | | |
 |(en) English (source)|100%|
 | | |
-|(de) Deutsch|100%|
-|(es) Spanish|100%|
-|(fr) French|100%|
-|(hu) Hungarian|100%|
+|(de) Deutsch|99%|
+|(es) Spanish|99%|
+|(fr) French|99%|
+|(hu) Hungarian|99%|
 
 - [Get started](#get-started)
 - [Usage](#usage)
