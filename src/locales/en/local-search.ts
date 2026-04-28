@@ -9,15 +9,15 @@ export default {
     displayDetails: 'Display detailed list',
     resetButtonTitle: 'Reset search',
     backButtonTitle: 'Close search',
-    noResultsText: 'No results',
+    noResultsText: 'No results for',
     footer: {
       selectText: 'Select',
-      selectKeyAriaLabel: 'Enter',
-      navigateText: 'Navigate',
-      navigateUpKeyAriaLabel: 'Arrow up',
-      navigateDownKeyAriaLabel: 'Arrow down',
-      closeText: 'Close',
-      closeKeyAriaLabel: 'Esc'
+      selectKeyAriaLabel: 'enter',
+      navigateText: 'to navigate',
+      navigateUpKeyAriaLabel: 'up arrow',
+      navigateDownKeyAriaLabel: 'down arrow',
+      closeText: 'to close',
+      closeKeyAriaLabel: 'esc'
     }
   }
 } satisfies LocalSearchTranslations

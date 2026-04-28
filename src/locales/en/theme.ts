@@ -1,24 +1,37 @@
-import type { DefaultThemeLocaleConfig } from '../../types'
+import type { ThemeConfig } from '../../types'
 
 export default {
-  outline: {
-    label: 'On this page'
+  notFound: {
+    title: 'PAGE NOT FOUND',
+    quote: "But if you don't change your direction, and if you keep looking, you may end up where you are heading.",
+    linkLabel: 'go to home',
+    linkText: 'Take me home'
+  },
+
+  footer: {
+    message: 'Built with <a href="https://vitepress.dev" target="_blank">VitePress</a>. Translations provided by <a href="https://npmjs.com/package/rozsazoltan/vitepress-lang" target="_blank">vitepress-lang</a>.',
+    // copyright: "...",
   },
   docFooter: {
     prev: 'Previous page',
     next: 'Next page'
   },
+
+  outline: {
+    label: 'On this page'
+  },
   editLink: {
-    text: 'Edit this page on GitHub'
+    text: 'Suggest changes to this page'
   },
   lastUpdated: {
     text: 'Last updated'
   },
-  darkModeSwitchLabel: 'Appearance',
-  lightModeSwitchTitle: 'Switch to light theme',
-  darkModeSwitchTitle: 'Switch to dark theme',
-  sidebarMenuLabel: 'Menu',
-  returnToTopLabel: 'Back to top',
-  langMenuLabel: 'Change language',
-  skipToContentLabel: 'Skip to content'
-} satisfies DefaultThemeLocaleConfig
+
+  langMenuLabel: 'Change Language',
+  returnToTopLabel: 'Return to top',
+  sidebarMenuLabel: 'Sidebar Menu',
+  darkModeSwitchLabel: 'Dark Theme',
+  lightModeSwitchTitle: 'Switch to light mode',
+  darkModeSwitchTitle: 'Switch to dark mode',
+  skipToContentLabel: 'Skip to content',
+} satisfies ThemeConfig
