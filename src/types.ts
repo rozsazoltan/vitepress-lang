@@ -9,9 +9,7 @@ export interface LocaleMeta {
   link?: string
 }
 
-export type ThemeConfig = Omit<DefaultTheme.Config, 'editLink'> & {
-  editLink?: Omit<NonNullable<DefaultTheme.Config['editLink']>, 'pattern'>
-}
+export type ThemeConfig = DefaultTheme.Config
 export type LocalSearchTranslations = NonNullable<DefaultTheme.LocalSearchOptions['translations']>
 export type AlgoliaSearchTranslations = NonNullable<DefaultTheme.AlgoliaSearchOptions['translations']>
 type AskAiObject = Extract<
@@ -21,7 +19,7 @@ type AskAiObject = Extract<
 export type AlgoliaAskAiSidePanelTranslations = AskAiObject['sidePanel'];
 
 export interface VitePressLocalePack extends LocaleMeta {
-  themeConfig: ThemeConfig
+  themeConfig: Partial<ThemeConfig>
   search: {
     local: { translations: LocalSearchTranslations }
     algolia: { translations: AlgoliaSearchTranslations }
@@ -30,12 +28,11 @@ export interface VitePressLocalePack extends LocaleMeta {
 }
 
 export type PlainObject = Record<string, unknown>
-
-export type LocaleConfigOverride = PlainObject & {
+export type LocaleConfigOverride = {
   label?: string
   lang?: string
   link?: string
-  themeConfig?: PlainObject
+  themeConfig?: Partial<ThemeConfig>
 }
 
 export interface DefineLangConfigOptions {

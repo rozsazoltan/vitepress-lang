@@ -21,6 +21,7 @@ export default {
     label: 'Sur cette page'
   },
   editLink: {
+    pattern: 'UNDEFINED',
     text: 'Suggérer des modifications à cette page'
   },
   lastUpdated: {

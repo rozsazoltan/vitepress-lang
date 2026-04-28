@@ -20,6 +20,7 @@ export default {
     label: 'Ezen az oldalon'
   },
   editLink: {
+    pattern: 'UNDEFINED',
     text: 'Javasolj módosításokat ehhez az oldalhoz'
   },
   lastUpdated: {

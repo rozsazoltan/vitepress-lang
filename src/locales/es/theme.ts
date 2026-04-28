@@ -22,6 +22,7 @@ export default {
     label: 'En esta página'
   },
   editLink: {
+    pattern: 'UNDEFINED',
     text: 'Sugerir cambios en esta página'
   },
   lastUpdated: {
