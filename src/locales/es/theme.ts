@@ -22,7 +22,7 @@ export default {
     label: 'En esta página'
   },
   editLink: {
-    text: 'Editar esta página en GitHub'
+    text: 'Sugerir cambios en esta página'
   },
   lastUpdated: {
     text: 'Actualizado el'

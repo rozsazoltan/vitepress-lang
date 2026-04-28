@@ -20,7 +20,7 @@ export default {
     label: 'Auf dieser Seite'
   },
   editLink: {
-    text: 'Änderungen an dieser Seite vorschlagen'
+    text: 'Vorschläge für Änderungen an dieser Seite'
   },
   lastUpdated: {
     text: 'Zuletzt aktualisiert'

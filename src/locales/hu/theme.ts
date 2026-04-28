@@ -20,7 +20,7 @@ export default {
     label: 'Ezen az oldalon'
   },
   editLink: {
-    text: 'Javasolj módosítást ehhez az oldalhoz'
+    text: 'Javasolj módosításokat ehhez az oldalhoz'
   },
   lastUpdated: {
     text: 'Utoljára frissítve'
