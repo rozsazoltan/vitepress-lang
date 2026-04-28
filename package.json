@@ -1,6 +1,6 @@
 {
   "name": "vitepress-lang",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "devDependencies": {
     "@types/node": "^24.0.0",
     "oxlint": "^1.61.0",
