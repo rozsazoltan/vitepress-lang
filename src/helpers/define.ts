@@ -3,11 +3,9 @@ import type {
   PlainObject,
   SearchConfig,
   SupportedLocale,
-  ThemeConfig,
   VPi18nConfig,
   VPi18nConfigOverride,
 } from '../types'
-import type { UserConfig } from 'vitepress'
 
 const langConfigSymbol = Symbol('vitepress-lang:config')
 const undefinedSentinel = 'UNDEFINED'
@@ -21,6 +19,20 @@ type LangConfigMeta = {
 
 type LangLocaleConfig = Omit<VPi18nConfig, 'search'> & {
   [langConfigSymbol]?: LangConfigMeta
+}
+
+type SearchLikeConfig = PlainObject & {
+  provider?: SearchProvider | string
+  options?: PlainObject
+}
+
+type ThemeLikeConfig = PlainObject & {
+  search?: SearchLikeConfig
+}
+
+type VitePressLikeConfig = PlainObject & {
+  themeConfig?: ThemeLikeConfig
+  locales?: Record<string, unknown>
 }
 
 type WithLangSearchOptions = {
@@ -132,7 +144,7 @@ function resolveLocale(
 }
 
 function resolveSearchProvider(
-  config: UserConfig<ThemeConfig>,
+  config: VitePressLikeConfig,
   options: WithLangSearchOptions,
 ): SearchProvider {
   if (options.searchProvider) {
@@ -213,13 +225,13 @@ export function defineLangConfig(
   return normalizedLocaleConfig
 }
 
-export function withLangSearch<T extends UserConfig<ThemeConfig>>(
+export function withLangSearch<T extends VitePressLikeConfig>(
   config: T,
   options: WithLangSearchOptions = {},
 ): T {
   const provider = resolveSearchProvider(config, options)
 
-  const themeConfig = (config.themeConfig ??= {}) as PlainObject
+  const themeConfig = ensurePlainObject(config, 'themeConfig')
   const searchConfig = ensurePlainObject(themeConfig, 'search')
 
   searchConfig.provider = provider
