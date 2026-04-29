@@ -8,7 +8,7 @@ export default {
   label: 'English',
   lang: 'en',
   link: '/en/',
-  themeConfig: themeConfig,
+  themeConfig,
   search: {
     local: { translations: localSearch },
     algolia: { translations: algoliaSearch },

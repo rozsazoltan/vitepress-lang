@@ -2,22 +2,22 @@ import type { LocalSearchTranslations } from '../../types'
 
 export default {
   button: {
-    buttonText: 'Search',
-    buttonAriaLabel: 'Search'
+    buttonText: 'Buscar',
+    buttonAriaLabel: 'Buscar',
   },
   modal: {
-    displayDetails: 'Display detailed list',
-    resetButtonTitle: 'Reset search',
-    backButtonTitle: 'Close search',
-    noResultsText: 'No results for',
+    displayDetails: 'Mostrar lista detallada',
+    resetButtonTitle: 'Restablecer búsqueda',
+    backButtonTitle: 'Cerrar búsqueda',
+    noResultsText: 'No hay resultados para',
     footer: {
-      selectText: 'Select',
-      selectKeyAriaLabel: 'enter',
-      navigateText: 'to navigate',
-      navigateUpKeyAriaLabel: 'up arrow',
-      navigateDownKeyAriaLabel: 'down arrow',
-      closeText: 'to close',
-      closeKeyAriaLabel: 'esc'
-    }
-  }
+      selectText: 'para seleccionar',
+      selectKeyAriaLabel: 'Enter',
+      navigateText: 'para navegar',
+      navigateUpKeyAriaLabel: 'Up arrow',
+      navigateDownKeyAriaLabel: 'Down arrow',
+      closeText: 'para cerrar',
+      closeKeyAriaLabel: 'Escape',
+    },
+  },
 } satisfies LocalSearchTranslations

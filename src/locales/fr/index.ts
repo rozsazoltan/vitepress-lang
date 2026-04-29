@@ -5,10 +5,10 @@ import algoliaSearch from './algolia-search'
 import askAiSidePanel from './ask-ai'
 
 export default {
-  label: 'English',
-  lang: 'en',
-  link: '/en/',
-  themeConfig: themeConfig,
+  label: 'Français',
+  lang: 'fr',
+  link: '/fr/',
+  themeConfig,
   search: {
     local: { translations: localSearch },
     algolia: { translations: algoliaSearch },

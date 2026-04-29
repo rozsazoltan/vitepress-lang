@@ -1,54 +1,54 @@
-import type { AlgoliaAskAiSidePanelTranslations } from "../../types";
+import type { AlgoliaAskAiSidePanelTranslations } from '../../types'
 
 export default {
   button: {
     translations: {
-      buttonText: "Demander à l'IA",
-      buttonAriaLabel: "Demander à l'IA",
+      buttonText: 'Demander à l’IA',
+      buttonAriaLabel: 'Demander à l’IA',
     },
   },
   panel: {
     translations: {
       header: {
-        title: "Demander à l'IA",
-        conversationHistoryTitle: "Historique de mes conversations",
-        newConversationText: "Nouvelle conversation",
-        viewConversationHistoryText: "Historique",
+        title: 'Demander à l’IA',
+        conversationHistoryTitle: 'Mon historique de conversations',
+        newConversationText: 'Démarrer une nouvelle conversation',
+        viewConversationHistoryText: 'Historique des conversations',
       },
       promptForm: {
-        promptPlaceholderText: "Poser une question",
-        promptAnsweringText: "En train de répondre...",
-        promptAskAnotherQuestionText: "Poser une autre question",
-        promptDisclaimerText:
-          "Réponse générée par l'IA, peut contenir des erreurs.",
-        promptLabelText:
-          "Entrée pour envoyer, Shift+Entrée pour saut de ligne.",
-        promptAriaLabelText: "Saisie de question",
+        promptPlaceholderText: 'Posez une question',
+        promptAnsweringText: 'Réponse en cours...',
+        promptAskAnotherQuestionText: 'Posez une autre question',
+        promptDisclaimerText: 'Les réponses sont générées par l’IA et peuvent contenir des erreurs.',
+        promptLabelText: 'Appuyez sur Entrée pour envoyer, ou Maj+Entrée pour une nouvelle ligne.',
+        promptAriaLabelText: 'Champ de prompt',
+        threadDepthErrorPlaceholder: 'Cette conversation a atteint sa limite',
+        startNewConversationButtonText: 'Démarrer une nouvelle conversation',
+        threadDepthBannerContinueText: 'Continuer dans une nouvelle conversation',
       },
       conversationScreen: {
-        preToolCallText: "Recherche en cours...",
-        searchingText: "Recherche en cours...",
-        toolCallResultText: "Recherche effectuée",
-        conversationDisclaimer:
-          "Réponse générée par l'IA, peut contenir des erreurs. Vérifiez.",
-        reasoningText: "Raisonnement en cours...",
-        thinkingText: "Réflexion en cours...",
-        relatedSourcesText: "Sources associées",
-        stoppedStreamingText: "Vous avez arrêté cette réponse",
-        copyButtonText: "Copier",
-        copyButtonCopiedText: "Copié !",
-        likeButtonTitle: "J'aime",
-        dislikeButtonTitle: "Je n'aime pas",
-        thanksForFeedbackText: "Merci pour votre retour !",
-        errorTitleText: "Erreur de chat",
+        preToolCallText: 'Recherche...',
+        searchingText: 'Recherche...',
+        toolCallResultText: 'Recherche effectuée',
+        conversationDisclaimer: 'Les réponses sont générées par l’IA et peuvent contenir des erreurs. Veuillez vérifier.',
+        reasoningText: 'Raisonnement...',
+        thinkingText: 'Réflexion...',
+        relatedSourcesText: 'Sources liées',
+        stoppedStreamingText: 'Vous avez arrêté cette réponse',
+        copyButtonText: 'Copier',
+        copyButtonCopiedText: 'Copié !',
+        likeButtonTitle: 'J’aime',
+        dislikeButtonTitle: 'Je n’aime pas',
+        thanksForFeedbackText: 'Merci pour votre retour !',
+        errorTitleText: 'Erreur de chat',
+        startNewConversationButtonText: 'Démarrer une nouvelle conversation',
       },
       newConversationScreen: {
-        titleText: "Comment puis-je vous aider aujourd'hui ?",
-        introductionText:
-          "Je vais rechercher dans votre documentation pour trouver rapidement des guides de configuration, des détails sur les fonctionnalités et des conseils de dépannage.",
+        titleText: 'Comment puis-je vous aider aujourd’hui ?',
+        introductionText: 'Je parcours votre documentation pour vous aider à trouver rapidement des guides de configuration, des détails de fonctionnalités et des conseils de dépannage.',
       },
       logo: {
-        poweredByText: "",
+        poweredByText: 'Propulsé par',
       },
     },
   },

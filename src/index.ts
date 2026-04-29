@@ -1,2 +1,2 @@
-export { defineLangConfig } from './helpers/define'
+export { defineLangConfig, withLangSearch } from './helpers/define'
 export type * from './types'

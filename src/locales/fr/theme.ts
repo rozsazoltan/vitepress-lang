@@ -1,38 +1,33 @@
-import type { ThemeConfig } from '../../types'
+import type { ThemeTranslations } from '../../types'
 
 export default {
   notFound: {
-    title: "PAGE INTROUVABLE",
-    quote: "La page n'existe pas, veuillez vérifier l'URL.",
-    linkLabel: "Retour à l'accueil",
-    linkText: "Retour à l'accueil",
+    title: 'PAGE INTROUVABLE',
+    quote: 'Mais si vous ne changez pas de direction et continuez à chercher, vous pourriez finir là où vous vous dirigez.',
+    linkLabel: 'aller à l’accueil',
+    linkText: 'Retour à l’accueil',
   },
-
   footer: {
-    message: 'Built with <a href="https://vitepress.dev" target="_blank">VitePress</a>. Translations provided by <a href="https://www.pmjs.com/package/vitepress-lang" target="_blank">vitepress-lang</a>.',
-    // copyright: "...",
+    message: 'Créé avec <a href="https://vitepress.dev" target="_blank" rel="noopener noreferrer">VitePress</a>. Traduit avec <a href="https://www.npmjs.com/package/vitepress-lang" target="_blank" rel="noopener noreferrer">vitepress-lang</a>.',
   },
   docFooter: {
-    prev: 'Précédent',
-    next: 'Suivant'
+    prev: 'Page précédente',
+    next: 'Page suivante',
   },
-
   outline: {
-    label: 'Sur cette page'
+    label: 'Sur cette page',
   },
   editLink: {
-    pattern: 'UNDEFINED',
-    text: 'Suggérer des modifications à cette page'
+    text: 'Modifier cette page',
   },
   lastUpdated: {
-    text: 'Dernière mise à jour'
+    text: 'Dernière mise à jour',
   },
-
-  langMenuLabel: 'Change Language',
+  langMenuLabel: 'Changer de langue',
   returnToTopLabel: 'Retour en haut',
-  sidebarMenuLabel: 'Sommaire',
-  darkModeSwitchLabel: 'Changer de mode',
-  lightModeSwitchTitle: 'Passer en mode clair',
-  darkModeSwitchTitle: 'Passer en mode sombre',
-  skipToContentLabel: 'Skip to content',
-} satisfies ThemeConfig
+  sidebarMenuLabel: 'Menu',
+  darkModeSwitchLabel: 'Apparence',
+  lightModeSwitchTitle: 'Passer au thème clair',
+  darkModeSwitchTitle: 'Passer au thème sombre',
+  skipToContentLabel: 'Aller au contenu',
+} satisfies ThemeTranslations

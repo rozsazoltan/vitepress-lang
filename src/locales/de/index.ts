@@ -8,10 +8,10 @@ export default {
   label: 'Deutsch',
   lang: 'de',
   link: '/de/',
-  themeConfig: themeConfig,
+  themeConfig,
   search: {
     local: { translations: localSearch },
     algolia: { translations: algoliaSearch },
-    askAi: { sidePanel: askAiSidePanel }
-  }
+    askAi: { sidePanel: askAiSidePanel },
+  },
 } satisfies VPi18nConfig

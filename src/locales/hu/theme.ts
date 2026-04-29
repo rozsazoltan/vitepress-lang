@@ -1,37 +1,33 @@
-import type { ThemeConfig } from '../../types'
+import type { ThemeTranslations } from '../../types'
 
 export default {
   notFound: {
     title: 'AZ OLDAL NEM TALÁLHATÓ',
-    quote: 'De ha nem változtatsz irányt, és tovább keresel, lehet, hogy oda érsz, ahová tartasz.',
-    linkLabel: 'ugrás a főoldalra',
-    linkText: 'Vigyél haza'
+    quote: 'De ha nem változtatsz irányt, és tovább keresel, végül oda juthatsz, amerre tartasz.',
+    linkLabel: 'vissza a kezdőlapra',
+    linkText: 'Vigyél a kezdőlapra',
   },
-
   footer: {
-    message: 'Készült <a href="https://vitepress.dev" target="_blank">VitePress</a> segítségével. A fordítást a <a href="https://www.npmjs.com/package/vitepress-lang" target="_blank">vitepress-lang</a> csomag biztosítja.',
+    message: 'Az oldal <a href="https://vitepress.dev" target="_blank" rel="noopener noreferrer">VitePress</a> segítségével készült, és <a href="https://www.npmjs.com/package/vitepress-lang" target="_blank" rel="noopener noreferrer">vitepress-lang</a> segítségével lett lefordítva.',
   },
   docFooter: {
     prev: 'Előző oldal',
-    next: 'Következő oldal'
+    next: 'Következő oldal',
   },
-
   outline: {
-    label: 'Ezen az oldalon'
+    label: 'Ezen az oldalon',
   },
   editLink: {
-    pattern: 'UNDEFINED',
-    text: 'Javasolj módosításokat ehhez az oldalhoz'
+    text: 'Oldal szerkesztése',
   },
   lastUpdated: {
-    text: 'Utoljára frissítve'
+    text: 'Utoljára frissítve',
   },
-
   langMenuLabel: 'Nyelv váltása',
   returnToTopLabel: 'Vissza a tetejére',
-  sidebarMenuLabel: 'Oldalsáv menü',
-  darkModeSwitchLabel: 'Sötét téma',
-  lightModeSwitchTitle: 'Váltás világos módra',
-  darkModeSwitchTitle: 'Váltás sötét módra',
-  skipToContentLabel: 'Ugrás a tartalomhoz',
-} satisfies ThemeConfig
+  sidebarMenuLabel: 'Menü',
+  darkModeSwitchLabel: 'Megjelenés',
+  lightModeSwitchTitle: 'Váltás világos témára',
+  darkModeSwitchTitle: 'Váltás sötét témára',
+  skipToContentLabel: 'Ugrás a tartalomra',
+} satisfies ThemeTranslations
