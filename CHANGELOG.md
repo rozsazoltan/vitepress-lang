@@ -13,24 +13,24 @@ No additional changes have been introduced at this time.
 
 ### Added
 
-- Added complete locale packs for Czech, Persian, Japanese, Korean, Portuguese, Romanian, Russian, Serbian, Slovak, and Chinese
-- Added localized footer messages for all supported languages
-- Added strict TypeScript coverage for VitePress default theme, local search, Algolia search, and Ask AI translation keys
-- Added `withLangSearch()` to automatically register search translations under `themeConfig.search.options.locales`
-- Added support for overriding theme, local search, Algolia search, and Ask AI translations
-- Added support for custom locale keys through `localeMap`
+- Added complete locale packs for Czech, Persian, Japanese, Korean, Portuguese, Romanian, Russian, Serbian, Slovak, and Chinese ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Added localized footer messages for all supported languages ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Added strict TypeScript coverage for VitePress default theme, local search, Algolia search, and Ask AI translation keys ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Added `withLangSearch()` to automatically register search translations under `themeConfig.search.options.locales` ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Added support for overriding theme, local search, Algolia search, and Ask AI translations ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Added support for custom locale keys through `localeMap` ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
 
 ### Changed
 
-- Improved `defineLangConfig()` to better separate locale config from internal search translation data
+- Improved `defineLangConfig()` to better separate locale config from internal search translation data ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
 
 ### Fixed
 
-- Fixed local search translations not being applied automatically
-- Fixed Algolia search translations not being applied automatically
-- Fixed Ask AI side panel translations not being wired into the generated VitePress search config
-- Fixed missing Ask AI side panel translation keys required by current DocSearch side panel types
-- Fixed TypeScript compatibility issues caused by leaking package-local VitePress `UserConfig` types into consuming projects
+- Fixed local search translations not being applied automatically ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Fixed Algolia search translations not being applied automatically ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Fixed Ask AI side panel translations not being wired into the generated VitePress search config ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Fixed missing Ask AI side panel translation keys required by current DocSearch side panel types ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
+- Fixed TypeScript compatibility issues caused by leaking package-local VitePress `UserConfig` types into consuming projects ([#7](https://github.com/rozsazoltan/vitepress-lang/pull/7))
 
 ## [0.2.0] - 2026-04-28
 
