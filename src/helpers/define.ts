@@ -1,12 +1,8 @@
-import type { DefaultTheme } from 'vitepress'
 import { localePacks } from '../locales'
 import type {
-  DefineLangConfigOptions,
-  LocaleConfigOverride,
   PlainObject,
-  SearchConfig,
-  SearchProvider,
-  SupportedLocale
+  SupportedLocale,
+  VPi18nConfig
 } from '../types'
 
 function isPlainObject(value: unknown): value is PlainObject {
@@ -32,53 +28,12 @@ function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
   return output as T
 }
 
-function createSearchConfig(locale: SupportedLocale, localeKey: string, provider: SearchProvider): SearchConfig {
-  const pack = localePacks[locale]
-
-  if (provider === 'algolia') {
-    return {
-      provider: 'algolia',
-      options: {
-        locales: {
-          [localeKey]: {
-            ...pack.search.algolia,
-            askAi: pack.search.askAi
-          }
-        }
-      }
-    }
-  }
-
-  return {
-    provider: 'local',
-    options: {
-      locales: {
-        [localeKey]: pack.search.local
-      }
-    }
-  }
-}
-
 export function defineLangConfig(
   locale: SupportedLocale,
-  override: LocaleConfigOverride = {},
-  options: DefineLangConfigOptions = {}
-) {
-  const pack = localePacks[locale]
-  const localeKey = options.localeKey ?? locale
-  const searchProvider = options.searchProvider ?? 'local'
-
-  const baseConfig: Partial<LocaleConfigOverride> = {
-    label: pack.label,
-    lang: pack.lang,
-    link: pack.link,
-    themeConfig: {
-      ...pack.themeConfig,
-      search: createSearchConfig(locale, localeKey, searchProvider)
-    }
-  }
-
-  const merged = deepMerge<typeof override>(baseConfig, override)
+  override: Partial<VPi18nConfig> = {},
+): VPi18nConfig {
+  const config: VPi18nConfig = localePacks[locale]
+  const merged = deepMerge(config, override)
 
   if (merged.themeConfig!.editLink!.pattern === 'UNDEFINED') {
     delete merged!.themeConfig!.editLink
