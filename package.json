@@ -1,6 +1,6 @@
 {
   "name": "vitepress-lang",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "peerDependencies": {
     "vitepress": "^1.6.0 || ^2.0.0-alpha.1"
   },
