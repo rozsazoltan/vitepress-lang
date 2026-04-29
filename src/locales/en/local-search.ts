@@ -3,7 +3,7 @@ import type { LocalSearchTranslations } from '../../types'
 export default {
   button: {
     buttonText: 'Search',
-    buttonAriaLabel: 'Search'
+    buttonAriaLabel: 'Search',
   },
   modal: {
     displayDetails: 'Display detailed list',
@@ -11,13 +11,13 @@ export default {
     backButtonTitle: 'Close search',
     noResultsText: 'No results for',
     footer: {
-      selectText: 'Select',
-      selectKeyAriaLabel: 'enter',
+      selectText: 'to select',
+      selectKeyAriaLabel: 'Enter',
       navigateText: 'to navigate',
-      navigateUpKeyAriaLabel: 'up arrow',
-      navigateDownKeyAriaLabel: 'down arrow',
+      navigateUpKeyAriaLabel: 'Up arrow',
+      navigateDownKeyAriaLabel: 'Down arrow',
       closeText: 'to close',
-      closeKeyAriaLabel: 'esc'
-    }
-  }
+      closeKeyAriaLabel: 'Escape',
+    },
+  },
 } satisfies LocalSearchTranslations

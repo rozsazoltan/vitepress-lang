@@ -11,11 +11,9 @@ export default {
       clearButtonAriaLabel: 'Clear the query',
       closeButtonText: 'Close',
       closeButtonAriaLabel: 'Close',
-      placeholderText: undefined, // fallback: 'Search docs' or 'Search docs or ask AI a question'
-      placeholderTextAskAi: undefined, // fallback: 'Ask another question...'
+      placeholderText: undefined,
+      placeholderTextAskAi: undefined,
       placeholderTextAskAiStreaming: 'Answering...',
-      // can only be one of the following
-      // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint#value
       enterKeyHint: 'search',
       enterKeyHintAskAi: 'enter',
       searchInputLabel: 'Search',
@@ -35,8 +33,7 @@ export default {
       favoriteSearchesTitle: 'Favorite',
       removeFavoriteSearchButtonTitle: 'Remove this search from favorites',
       recentConversationsTitle: 'Recent conversations',
-      removeRecentConversationButtonTitle:
-        'Remove this conversation from history',
+      removeRecentConversationButtonTitle: 'Remove this conversation from history',
     },
     errorScreen: {
       titleText: 'Unable to fetch results',
@@ -53,8 +50,7 @@ export default {
       noResultsAskAiPlaceholder: 'Didn\'t find it in the docs? Ask AI to help: ',
     },
     askAiScreen: {
-      disclaimerText:
-        'Answers are generated with AI which can make mistakes. Verify responses.',
+      disclaimerText: 'Answers are generated with AI, which can make mistakes. Verify responses.',
       relatedSourcesText: 'Related sources',
       thinkingText: 'Thinking...',
       copyButtonText: 'Copy',
@@ -66,10 +62,8 @@ export default {
       preToolCallText: 'Searching...',
       duringToolCallText: 'Searching for ',
       afterToolCallText: 'Searched for',
-      // If provided, these override the default rendering of aggregated tool calls:
-      aggregatedToolCallNode: undefined, // (queries: string[], onSearchQueryClick: (query: string) => void) => React.ReactNode
-      aggregatedToolCallText: undefined, // (queries: string[]) => { before?: string; separator?: string; lastSeparator?: string; after?: string }
-      // Text to show when user has stopped streaming a message
+      aggregatedToolCallNode: undefined,
+      aggregatedToolCallText: undefined,
       stoppedStreamingText: 'You stopped this response',
       errorTitleText: 'Chat error',
       startNewConversationButtonText: 'Start a new conversation',
@@ -88,7 +82,7 @@ export default {
     },
     newConversation: {
       newConversationTitle: 'How can I help you today?',
-      newConversationDescription: 'I search through your documentation to help you find setup guides, feature details and troubleshooting tips, fast.'
-    }
+      newConversationDescription: 'I search your documentation to help you quickly find setup guides, feature details, and troubleshooting tips.',
+    },
   },
 } satisfies AlgoliaSearchTranslations

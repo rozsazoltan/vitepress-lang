@@ -1,28 +1,26 @@
 import type { DefaultTheme, UserConfig } from 'vitepress'
 
-export type SupportedLocale = 'de' | 'en' | 'es' | 'fr' | 'hu'
+export type SupportedLocale =
+  | 'en'
+  | 'es'
+  | 'fa'
+  | 'ja'
+  | 'ko'
+  | 'pt'
+  | 'ru'
+  | 'zh'
+  | 'de'
+  | 'hu'
+  | 'fr'
+  | 'ro'
+  | 'sr'
+  | 'sk'
+  | 'cs'
 
 export type ThemeConfig = DefaultTheme.Config
 
 type PlainFunction = (...args: never[]) => unknown
 
-/**
- * Strict translation object:
- *
- * - every upstream key must be present
- * - nested objects must also list their keys
- * - leaf values may be undefined to intentionally use the upstream default
- *
- * Example:
- *
- * {
- *   placeholderText: undefined
- * }
- *
- * is valid.
- *
- * Missing `placeholderText` is invalid.
- */
 type StrictTranslationObject<T> = {
   [Key in keyof Required<NonNullable<T>>]-?: StrictTranslationValue<
     Required<NonNullable<T>>[Key]
@@ -127,25 +125,6 @@ type LastUpdatedTranslations =
   RequiredTranslationPick<LastUpdatedConfig, LastUpdatedTranslationKeys> &
   OptionalRemaining<LastUpdatedConfig, LastUpdatedTranslationKeys>
 
-/**
- * Required VitePress default-theme translation keys.
- *
- * This intentionally excludes project-specific content/config such as:
- * - nav
- * - sidebar
- * - footer
- * - logo
- * - socialLinks
- * - carbonAds
- * - search
- *
- * Non-translation config fields stay optional:
- * - outline.level
- * - editLink.pattern
- * - lastUpdated.formatOptions
- * - notFound.link
- * - notFound.code
- */
 export type ThemeTranslations = ThemeTextTranslations & {
   notFound: NotFoundTranslations
   footer: FooterTranslations

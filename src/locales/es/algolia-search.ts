@@ -3,48 +3,27 @@ import type { AlgoliaSearchTranslations } from '../../types'
 export default {
   button: {
     buttonText: 'Buscar',
-    buttonAriaLabel: 'Buscar'
+    buttonAriaLabel: 'Buscar',
   },
   modal: {
     searchBox: {
-      clearButtonTitle: 'Limpiar',
+      clearButtonTitle: 'Borrar',
       clearButtonAriaLabel: 'Borrar la consulta',
       closeButtonText: 'Cerrar',
       closeButtonAriaLabel: 'Cerrar',
-      placeholderText: 'Buscar en la documentación o preguntar a Ask AI',
-      placeholderTextAskAi: 'Haz otra pregunta...',
+      placeholderText: undefined,
+      placeholderTextAskAi: undefined,
       placeholderTextAskAiStreaming: 'Respondiendo...',
+      enterKeyHint: 'search',
+      enterKeyHintAskAi: 'enter',
       searchInputLabel: 'Buscar',
-      backToKeywordSearchButtonText:
-        'Volver a la búsqueda por palabras clave',
-      backToKeywordSearchButtonAriaLabel:
-        'Volver a la búsqueda por palabras clave',
+      backToKeywordSearchButtonText: 'Volver a la búsqueda por palabras clave',
+      backToKeywordSearchButtonAriaLabel: 'Volver a la búsqueda por palabras clave',
       newConversationPlaceholder: 'Haz una pregunta',
       conversationHistoryTitle: 'Mi historial de conversaciones',
       startNewConversationText: 'Iniciar una nueva conversación',
       viewConversationHistoryText: 'Historial de conversaciones',
-      threadDepthErrorPlaceholder: 'Se alcanzó el límite de conversación'
-    },
-    newConversation: {
-      newConversationTitle: '¿Cómo puedo ayudarte hoy?',
-      newConversationDescription:
-        'Busco en tu documentación para ayudarte a encontrar guías de configuración, detalles de funciones y consejos de solución de problemas rápidamente.'
-    },
-    footer: {
-      selectText: 'Seleccionar',
-      submitQuestionText: 'Enviar pregunta',
-      selectKeyAriaLabel: 'Tecla Enter',
-      navigateText: 'Navegar',
-      navigateUpKeyAriaLabel: 'Flecha arriba',
-      navigateDownKeyAriaLabel: 'Flecha abajo',
-      closeText: 'Cerrar',
-      backToSearchText: 'Volver a la búsqueda',
-      closeKeyAriaLabel: 'Tecla Escape',
-      poweredByText: 'Con la tecnología de'
-    },
-    errorScreen: {
-      titleText: 'No se pueden obtener resultados',
-      helpText: 'Puede que quieras comprobar tu conexión de red.'
+      threadDepthErrorPlaceholder: 'Esta conversación ha alcanzado su límite',
     },
     startScreen: {
       recentSearchesTitle: 'Recientes',
@@ -52,27 +31,26 @@ export default {
       saveRecentSearchButtonTitle: 'Guardar esta búsqueda',
       removeRecentSearchButtonTitle: 'Eliminar esta búsqueda del historial',
       favoriteSearchesTitle: 'Favoritos',
-      removeFavoriteSearchButtonTitle:
-        'Eliminar esta búsqueda de favoritos',
+      removeFavoriteSearchButtonTitle: 'Eliminar esta búsqueda de favoritos',
       recentConversationsTitle: 'Conversaciones recientes',
-      removeRecentConversationButtonTitle:
-        'Eliminar esta conversación del historial'
+      removeRecentConversationButtonTitle: 'Eliminar esta conversación del historial',
+    },
+    errorScreen: {
+      titleText: 'No se pudieron obtener resultados',
+      helpText: 'Quizá quieras comprobar tu conexión de red.',
     },
     noResultsScreen: {
       noResultsText: 'No se encontraron resultados para',
-      suggestedQueryText: 'Intenta buscar',
-      reportMissingResultsText:
-        '¿Crees que esta consulta debería devolver resultados?',
-      reportMissingResultsLinkText: 'Avísanos.'
+      suggestedQueryText: 'Prueba a buscar',
+      reportMissingResultsText: '¿Crees que esta consulta debería devolver resultados?',
+      reportMissingResultsLinkText: 'Cuéntanoslo.',
     },
     resultsScreen: {
       askAiPlaceholder: 'Preguntar a la IA: ',
-      noResultsAskAiPlaceholder:
-        '¿No lo encontraste en la documentación? Pide ayuda a Ask AI: '
+      noResultsAskAiPlaceholder: '¿No lo encontraste en la documentación? Pide ayuda a la IA: ',
     },
     askAiScreen: {
-      disclaimerText:
-        'Las respuestas se generan con IA y pueden contener errores. Verifícalas.',
+      disclaimerText: 'Las respuestas se generan con IA y pueden contener errores. Verifícalas.',
       relatedSourcesText: 'Fuentes relacionadas',
       thinkingText: 'Pensando...',
       copyButtonText: 'Copiar',
@@ -80,14 +58,31 @@ export default {
       copyButtonTitle: 'Copiar',
       likeButtonTitle: 'Me gusta',
       dislikeButtonTitle: 'No me gusta',
-      thanksForFeedbackText: '¡Gracias por tu comentario!',
+      thanksForFeedbackText: '¡Gracias por tus comentarios!',
       preToolCallText: 'Buscando...',
-      duringToolCallText: 'Buscando...',
-      afterToolCallText: 'Buscado',
-      stoppedStreamingText: 'Has detenido esta respuesta',
-      errorTitleText: 'Error de chat',
-      // threadDepthExceededMessage: 'Esta conversación se ha cerrado para mantener respuestas precisas.',
-      startNewConversationButtonText: 'Iniciar una nueva conversación'
-    }
-  }
+      duringToolCallText: 'Buscando ',
+      afterToolCallText: 'Se buscó',
+      aggregatedToolCallNode: undefined,
+      aggregatedToolCallText: undefined,
+      stoppedStreamingText: 'Detuviste esta respuesta',
+      errorTitleText: 'Error del chat',
+      startNewConversationButtonText: 'Iniciar una nueva conversación',
+    },
+    footer: {
+      selectText: 'para seleccionar',
+      submitQuestionText: 'Enviar pregunta',
+      selectKeyAriaLabel: 'Enter key',
+      navigateText: 'Navegar',
+      navigateUpKeyAriaLabel: 'Arrow up',
+      navigateDownKeyAriaLabel: 'Arrow down',
+      closeText: 'Cerrar',
+      backToSearchText: 'Volver a la búsqueda',
+      closeKeyAriaLabel: 'Escape key',
+      poweredByText: 'Con tecnología de',
+    },
+    newConversation: {
+      newConversationTitle: '¿Cómo puedo ayudarte hoy?',
+      newConversationDescription: 'Busco en tu documentación para ayudarte a encontrar rápidamente guías de configuración, detalles de funciones y consejos de solución de problemas.',
+    },
+  },
 } satisfies AlgoliaSearchTranslations

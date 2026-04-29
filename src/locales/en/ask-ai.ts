@@ -1,4 +1,4 @@
-import type { AlgoliaAskAiSidePanelTranslations } from "../../types";
+import type { AlgoliaAskAiSidePanelTranslations } from '../../types'
 
 export default {
   button: {
@@ -41,8 +41,7 @@ export default {
       },
       newConversationScreen: {
         titleText: 'How can I help you today?',
-        introductionText:
-          'I search your documentation to help you quickly find setup guides, feature details, and troubleshooting tips.',
+        introductionText: 'I search your documentation to help you quickly find setup guides, feature details, and troubleshooting tips.',
       },
       logo: {
         poweredByText: 'Powered by',

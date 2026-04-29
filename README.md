@@ -4,15 +4,16 @@
 
 It translates VitePress default theme labels, local search UI, Algolia search UI, and Ask AI UI strings.
 
-|Available|Status|
-|:---|---:|
-| | |
-|(en) English (source)|100%|
-| | |
-|(de) Deutsch|99%|
-|(es) Spanish|99%|
-|(fr) French|99%|
-|(hu) Hungarian|99%|
+| Language | Status | Language | Status |
+| :--- | ---: | :--- | ---: |
+| (en) English (source) | 100% | (ja) 日本語 | 100% |
+| (de) Deutsch | 100% | (ko) 한국어 | 100% |
+| (es) Español | 100% | (pt) Português | 100% |
+| (fr) Français | 100% | (ru) Русский | 100% |
+| (hu) Magyar | 100% | (zh) 简体中文 | 100% |
+| (fa) فارسی | 100% | (ro) Română | 100% |
+| (sr) Srpski | 100% | (sk) Slovenčina | 100% |
+| (cs) Čeština | 100% |  |  |
 
 - [Get started](#get-started)
 - [Usage](#usage)

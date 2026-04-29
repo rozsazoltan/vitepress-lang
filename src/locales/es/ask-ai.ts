@@ -1,4 +1,4 @@
-import type { AlgoliaAskAiSidePanelTranslations } from "../../types";
+import type { AlgoliaAskAiSidePanelTranslations } from '../../types'
 
 export default {
   button: {
@@ -19,36 +19,32 @@ export default {
         promptPlaceholderText: 'Haz una pregunta',
         promptAnsweringText: 'Respondiendo...',
         promptAskAnotherQuestionText: 'Haz otra pregunta',
-        promptDisclaimerText:
-          'Las respuestas se generan con IA y pueden contener errores.',
-        promptLabelText:
-          'Pulsa Enter para enviar, o Shift+Enter para una nueva línea.',
-        promptAriaLabelText: 'Entrada de prompt',
+        promptDisclaimerText: 'Las respuestas son generadas por IA y pueden contener errores.',
+        promptLabelText: 'Pulsa Enter para enviar o Shift+Enter para una nueva línea.',
+        promptAriaLabelText: 'Entrada del prompt',
       },
       conversationScreen: {
         preToolCallText: 'Buscando...',
         searchingText: 'Buscando...',
         toolCallResultText: 'Buscado',
-        conversationDisclaimer:
-          'Las respuestas se generan con IA y pueden contener errores. Verifícalas.',
+        conversationDisclaimer: 'Las respuestas son generadas por IA y pueden contener errores. Verifícalas.',
         reasoningText: 'Razonando...',
         thinkingText: 'Pensando...',
         relatedSourcesText: 'Fuentes relacionadas',
-        stoppedStreamingText: 'Has detenido esta respuesta',
+        stoppedStreamingText: 'Detuviste esta respuesta',
         copyButtonText: 'Copiar',
         copyButtonCopiedText: '¡Copiado!',
         likeButtonTitle: 'Me gusta',
         dislikeButtonTitle: 'No me gusta',
-        thanksForFeedbackText: '¡Gracias por tu comentario!',
-        errorTitleText: 'Error de chat',
+        thanksForFeedbackText: '¡Gracias por tus comentarios!',
+        errorTitleText: 'Error del chat',
       },
       newConversationScreen: {
         titleText: '¿Cómo puedo ayudarte hoy?',
-        introductionText:
-          'Busco en tu documentación para ayudarte a encontrar guías de configuración, detalles de funciones y consejos de solución de problemas rápidamente.',
+        introductionText: 'Busco en tu documentación para ayudarte a encontrar rápidamente guías de configuración, detalles de funciones y consejos de solución de problemas.',
       },
       logo: {
-        poweredByText: 'Con la tecnología de',
+        poweredByText: 'Con tecnología de',
       },
     },
   },

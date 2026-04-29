@@ -1,20 +1,23 @@
 import type { LocalSearchTranslations } from '../../types'
 
 export default {
-  button: { buttonText: 'Keresés', buttonAriaLabel: 'Keresés' },
+  button: {
+    buttonText: 'Keresés',
+    buttonAriaLabel: 'Keresés',
+  },
   modal: {
     displayDetails: 'Részletes lista megjelenítése',
-    resetButtonTitle: 'Keresés visszaállítása',
+    resetButtonTitle: 'Keresés alaphelyzetbe állítása',
     backButtonTitle: 'Keresés bezárása',
-    noResultsText: 'Nincs találat',
+    noResultsText: 'Nincs találat erre:',
     footer: {
-      selectText: 'Kiválasztás',
+      selectText: 'kiválasztás',
       selectKeyAriaLabel: 'Enter',
-      navigateText: 'Navigálás',
-      navigateUpKeyAriaLabel: 'Felfelé nyíl',
-      navigateDownKeyAriaLabel: 'Lefelé nyíl',
-      closeText: 'Bezárás',
-      closeKeyAriaLabel: 'Esc'
-    }
-  }
+      navigateText: 'navigálás',
+      navigateUpKeyAriaLabel: 'Up arrow',
+      navigateDownKeyAriaLabel: 'Down arrow',
+      closeText: 'bezárás',
+      closeKeyAriaLabel: 'Escape',
+    },
+  },
 } satisfies LocalSearchTranslations
