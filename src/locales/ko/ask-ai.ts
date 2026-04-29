@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: '답변은 AI가 생성하며 오류가 있을 수 있습니다.',
         promptLabelText: 'Enter로 보내고 Shift+Enter로 줄을 바꿉니다.',
         promptAriaLabelText: '프롬프트 입력',
+        threadDepthErrorPlaceholder: '이 대화가 한도에 도달했습니다',
+        startNewConversationButtonText: '새 대화 시작',
+        threadDepthBannerContinueText: '새 대화에서 계속하기',
       },
       conversationScreen: {
         preToolCallText: '검색 중...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: '싫어요',
         thanksForFeedbackText: '피드백 감사합니다!',
         errorTitleText: '채팅 오류',
+        startNewConversationButtonText: '새 대화 시작',
       },
       newConversationScreen: {
         titleText: '오늘 무엇을 도와드릴까요?',

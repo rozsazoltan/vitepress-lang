@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: '回答は AI によって生成され、誤りを含む場合があります。',
         promptLabelText: 'Enter で送信、Shift+Enter で改行します。',
         promptAriaLabelText: 'プロンプト入力',
+        threadDepthErrorPlaceholder: 'この会話は上限に達しました',
+        startNewConversationButtonText: '新しい会話を開始',
+        threadDepthBannerContinueText: '新しい会話で続ける',
       },
       conversationScreen: {
         preToolCallText: '検索中...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: '低評価',
         thanksForFeedbackText: 'フィードバックありがとうございます！',
         errorTitleText: 'チャットエラー',
+        startNewConversationButtonText: '新しい会話を開始',
       },
       newConversationScreen: {
         titleText: '今日はどのようにお手伝いできますか？',

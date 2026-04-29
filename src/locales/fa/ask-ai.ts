@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'پاسخ‌ها توسط هوش مصنوعی تولید می‌شوند و ممکن است خطا داشته باشند.',
         promptLabelText: 'برای ارسال Enter و برای خط جدید Shift+Enter را بزنید.',
         promptAriaLabelText: 'ورودی پرامپت',
+        threadDepthErrorPlaceholder: 'این گفت‌وگو به حد مجاز خود رسیده است',
+        startNewConversationButtonText: 'شروع گفت‌وگوی جدید',
+        threadDepthBannerContinueText: 'ادامه در گفت‌وگوی جدید',
       },
       conversationScreen: {
         preToolCallText: 'در حال جستجو...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'نپسندیدن',
         thanksForFeedbackText: 'از بازخورد شما سپاسگزاریم!',
         errorTitleText: 'خطای گفت‌وگو',
+        startNewConversationButtonText: 'شروع گفت‌وگوی جدید',
       },
       newConversationScreen: {
         titleText: 'امروز چطور می‌توانم کمک کنم؟',

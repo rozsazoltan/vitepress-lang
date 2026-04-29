@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'Ответы генерируются ИИ и могут содержать ошибки.',
         promptLabelText: 'Нажмите Enter для отправки или Shift+Enter для новой строки.',
         promptAriaLabelText: 'Поле ввода запроса',
+        threadDepthErrorPlaceholder: 'Этот разговор достиг лимита',
+        startNewConversationButtonText: 'Начать новый разговор',
+        threadDepthBannerContinueText: 'Продолжить в новом разговоре',
       },
       conversationScreen: {
         preToolCallText: 'Поиск...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Не нравится',
         thanksForFeedbackText: 'Спасибо за отзыв!',
         errorTitleText: 'Ошибка чата',
+        startNewConversationButtonText: 'Начать новый разговор',
       },
       newConversationScreen: {
         titleText: 'Чем я могу помочь сегодня?',

@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'Odgovore generiše AI i mogu sadržati greške.',
         promptLabelText: 'Pritisni Enter za slanje ili Shift+Enter za novi red.',
         promptAriaLabelText: 'Unos prompta',
+        threadDepthErrorPlaceholder: 'Ova konverzacija je dostigla ograničenje',
+        startNewConversationButtonText: 'Započni novu konverzaciju',
+        threadDepthBannerContinueText: 'Nastavi u novoj konverzaciji',
       },
       conversationScreen: {
         preToolCallText: 'Pretraživanje...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Ne sviđa mi se',
         thanksForFeedbackText: 'Hvala na povratnoj informaciji!',
         errorTitleText: 'Greška u četu',
+        startNewConversationButtonText: 'Započni novu konverzaciju',
       },
       newConversationScreen: {
         titleText: 'Kako mogu da pomognem danas?',

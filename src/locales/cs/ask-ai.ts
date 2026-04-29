@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'Odpovědi generuje AI a mohou obsahovat chyby.',
         promptLabelText: 'Stiskněte Enter pro odeslání nebo Shift+Enter pro nový řádek.',
         promptAriaLabelText: 'Vstup promptu',
+        threadDepthErrorPlaceholder: 'Tato konverzace dosáhla limitu',
+        startNewConversationButtonText: 'Zahájit novou konverzaci',
+        threadDepthBannerContinueText: 'Pokračovat v nové konverzaci',
       },
       conversationScreen: {
         preToolCallText: 'Hledám...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Nelíbí se mi',
         thanksForFeedbackText: 'Děkujeme za zpětnou vazbu!',
         errorTitleText: 'Chyba chatu',
+        startNewConversationButtonText: 'Zahájit novou konverzaci',
       },
       newConversationScreen: {
         titleText: 'Jak vám dnes mohu pomoci?',

@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'Antworten werden von KI generiert und können Fehler enthalten.',
         promptLabelText: 'Drücke Enter zum Senden oder Shift+Enter für eine neue Zeile.',
         promptAriaLabelText: 'Prompt-Eingabe',
+        threadDepthErrorPlaceholder: 'Diese Unterhaltung hat ihr Limit erreicht',
+        startNewConversationButtonText: 'Neue Unterhaltung starten',
+        threadDepthBannerContinueText: 'In einer neuen Unterhaltung fortfahren',
       },
       conversationScreen: {
         preToolCallText: 'Suche...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Gefällt mir nicht',
         thanksForFeedbackText: 'Danke für dein Feedback!',
         errorTitleText: 'Chat-Fehler',
+        startNewConversationButtonText: 'Neue Unterhaltung starten',
       },
       newConversationScreen: {
         titleText: 'Wie kann ich dir heute helfen?',

@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'Răspunsurile sunt generate de AI și pot conține erori.',
         promptLabelText: 'Apasă Enter pentru trimitere sau Shift+Enter pentru linie nouă.',
         promptAriaLabelText: 'Câmp prompt',
+        threadDepthErrorPlaceholder: 'Această conversație a atins limita',
+        startNewConversationButtonText: 'Începe o conversație nouă',
+        threadDepthBannerContinueText: 'Continuă într-o conversație nouă',
       },
       conversationScreen: {
         preToolCallText: 'Se caută...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Nu aprecia',
         thanksForFeedbackText: 'Mulțumim pentru feedback!',
         errorTitleText: 'Eroare de chat',
+        startNewConversationButtonText: 'Începe o conversație nouă',
       },
       newConversationScreen: {
         titleText: 'Cu ce te pot ajuta astăzi?',

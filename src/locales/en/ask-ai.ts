@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'Answers are AI-generated and may contain errors.',
         promptLabelText: 'Press Enter to send, or Shift+Enter for a new line.',
         promptAriaLabelText: 'Prompt input',
+        threadDepthErrorPlaceholder: 'This conversation has reached its limit',
+        startNewConversationButtonText: 'Start a new conversation',
+        threadDepthBannerContinueText: 'Continue in a new conversation',
       },
       conversationScreen: {
         preToolCallText: 'Searching...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Dislike',
         thanksForFeedbackText: 'Thanks for your feedback!',
         errorTitleText: 'Chat error',
+        startNewConversationButtonText: 'Start a new conversation',
       },
       newConversationScreen: {
         titleText: 'How can I help you today?',

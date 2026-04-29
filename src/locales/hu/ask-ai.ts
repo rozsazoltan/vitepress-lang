@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'A válaszokat AI generálja, ezért hibákat tartalmazhatnak.',
         promptLabelText: 'Enter: küldés, Shift+Enter: új sor.',
         promptAriaLabelText: 'Prompt mező',
+        threadDepthErrorPlaceholder: 'Ez a beszélgetés elérte a korlátját',
+        startNewConversationButtonText: 'Új beszélgetés indítása',
+        threadDepthBannerContinueText: 'Folytatás új beszélgetésben',
       },
       conversationScreen: {
         preToolCallText: 'Keresés...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Nem tetszik',
         thanksForFeedbackText: 'Köszönjük a visszajelzést!',
         errorTitleText: 'Chat hiba',
+        startNewConversationButtonText: 'Új beszélgetés indítása',
       },
       newConversationScreen: {
         titleText: 'Miben segíthetek ma?',

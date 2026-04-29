@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: 'As respostas são geradas por IA e podem conter erros.',
         promptLabelText: 'Pressione Enter para enviar ou Shift+Enter para uma nova linha.',
         promptAriaLabelText: 'Entrada do prompt',
+        threadDepthErrorPlaceholder: 'Esta conversa atingiu o limite',
+        startNewConversationButtonText: 'Iniciar uma nova conversa',
+        threadDepthBannerContinueText: 'Continuar em uma nova conversa',
       },
       conversationScreen: {
         preToolCallText: 'Pesquisando...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: 'Não curtir',
         thanksForFeedbackText: 'Obrigado pelo feedback!',
         errorTitleText: 'Erro no chat',
+        startNewConversationButtonText: 'Iniciar uma nova conversa',
       },
       newConversationScreen: {
         titleText: 'Como posso ajudar hoje?',

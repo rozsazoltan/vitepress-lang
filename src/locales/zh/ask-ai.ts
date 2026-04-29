@@ -22,6 +22,9 @@ export default {
         promptDisclaimerText: '回答由 AI 生成，可能包含错误。',
         promptLabelText: '按 Enter 发送，或按 Shift+Enter 换行。',
         promptAriaLabelText: '提示词输入',
+        threadDepthErrorPlaceholder: '此对话已达到限制',
+        startNewConversationButtonText: '开始新对话',
+        threadDepthBannerContinueText: '在新对话中继续',
       },
       conversationScreen: {
         preToolCallText: '搜索中...',
@@ -38,6 +41,7 @@ export default {
         dislikeButtonTitle: '踩',
         thanksForFeedbackText: '感谢你的反馈！',
         errorTitleText: '聊天错误',
+        startNewConversationButtonText: '开始新对话',
       },
       newConversationScreen: {
         titleText: '今天我能帮你做什么？',
