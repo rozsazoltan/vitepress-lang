@@ -7,10 +7,11 @@ import fr from './fr'
 import hu from './hu'
 
 export { de, en, es, fr, hu }
-export const localePacks = {
+
+export const localePacks: Record<SupportedLocale, VPi18nConfig> = {
   de,
   en,
   es,
   fr,
   hu,
-} satisfies Record<SupportedLocale, VPi18nConfig>
+}
