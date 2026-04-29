@@ -9,7 +9,7 @@ export default {
   },
 
   footer: {
-    message: 'Built with <a href="https://vitepress.dev" target="_blank">VitePress</a>. Translations provided by <a href="https://www.pmjs.com/package/vitepress-lang" target="_blank">vitepress-lang</a>.',
+    message: 'Built with <a href="https://vitepress.dev" target="_blank">VitePress</a>. Translations provided by <a href="https://npmjs.com/package/rozsazoltan/vitepress-lang" target="_blank">vitepress-lang</a>.',
     // copyright: "...",
   },
   docFooter: {

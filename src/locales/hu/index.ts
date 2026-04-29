@@ -1,4 +1,4 @@
-import type { VPi18nConfig } from '../../types'
+import type { VitePressLocalePack } from '../../types'
 import themeConfig from './theme'
 import localSearch from './local-search'
 import algoliaSearch from './algolia-search'
@@ -14,4 +14,4 @@ export default {
     algolia: { translations: algoliaSearch },
     askAi: { sidePanel: askAiSidePanel }
   }
-} satisfies VPi18nConfig
+} satisfies VitePressLocalePack

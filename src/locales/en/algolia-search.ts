@@ -24,7 +24,8 @@ export default {
       newConversationPlaceholder: 'Ask a question',
       conversationHistoryTitle: 'My conversation history',
       startNewConversationText: 'Start a new conversation',
-      viewConversationHistoryText: 'Conversation history'
+      viewConversationHistoryText: 'Conversation history',
+      threadDepthErrorPlaceholder: 'This conversation has reached its limit',
     },
     startScreen: {
       recentSearchesTitle: 'Recent',
@@ -70,6 +71,8 @@ export default {
       aggregatedToolCallText: undefined, // (queries: string[]) => { before?: string; separator?: string; lastSeparator?: string; after?: string }
       // Text to show when user has stopped streaming a message
       stoppedStreamingText: 'You stopped this response',
+      errorTitleText: 'Chat error',
+      startNewConversationButtonText: 'Start a new conversation',
     },
     footer: {
       selectText: 'Select',

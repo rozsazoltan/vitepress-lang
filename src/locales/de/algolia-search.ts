@@ -64,6 +64,8 @@ export default {
       aggregatedToolCallNode: undefined,
       aggregatedToolCallText: undefined,
       stoppedStreamingText: 'Sie haben diese Antwort gestoppt',
+      errorTitleText: 'Chat error',
+      startNewConversationButtonText: 'Start a new conversation',
     },
     footer: {
       selectText: 'auswählen',
