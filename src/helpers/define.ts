@@ -3,17 +3,19 @@ import type {
   PlainObject,
   SupportedLocale,
   VPi18nConfig,
-  VPi18nConfigOverride
 } from '../types'
 
 function isPlainObject(value: unknown): value is PlainObject {
   return Object.prototype.toString.call(value) === '[object Object]'
 }
 
-function deepMerge<T extends object>(base: T, override?: Partial<T>): T {
+function deepMerge<T extends PlainObject>(
+  base: T,
+  override?: PlainObject,
+): T {
   if (!override) return { ...base }
 
-  const output: Record<string, unknown> = { ...base }
+  const output: PlainObject = { ...base }
 
   for (const [key, value] of Object.entries(override)) {
     const current = output[key]
@@ -31,13 +33,17 @@ function deepMerge<T extends object>(base: T, override?: Partial<T>): T {
 
 export function defineLangConfig(
   locale: SupportedLocale,
-  override: VPi18nConfigOverride = {},
+  override: Partial<VPi18nConfig> = {},
 ): VPi18nConfig {
   const config = localePacks[locale]
-  const merged = deepMerge(config, override)
 
-  if (merged.themeConfig?.editLink?.pattern === 'UNDEFINED') {
-    delete merged.themeConfig.editLink
+  const merged = deepMerge(
+    config as unknown as PlainObject,
+    override as unknown as PlainObject,
+  ) as VPi18nConfig
+
+  if (merged.themeConfig.editLink?.pattern === 'UNDEFINED') {
+    merged.themeConfig.editLink = undefined
   }
 
   return merged
