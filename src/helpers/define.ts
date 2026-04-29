@@ -1,19 +1,18 @@
-import type { DefaultTheme } from 'vitepress'
 import { localePacks } from '../locales'
 import type {
-  DefineLangConfigOptions,
-  LocaleConfigOverride,
   PlainObject,
-  SearchConfig,
-  SearchProvider,
-  SupportedLocale
+  SupportedLocale,
+  VPi18nConfig,
 } from '../types'
 
 function isPlainObject(value: unknown): value is PlainObject {
   return Object.prototype.toString.call(value) === '[object Object]'
 }
 
-function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
+function deepMerge<T extends PlainObject>(
+  base: T,
+  override?: PlainObject,
+): T {
   if (!override) return { ...base }
 
   const output: PlainObject = { ...base }
@@ -32,56 +31,19 @@ function deepMerge<T extends PlainObject>(base: T, override?: PlainObject): T {
   return output as T
 }
 
-function createSearchConfig(locale: SupportedLocale, localeKey: string, provider: SearchProvider): SearchConfig {
-  const pack = localePacks[locale]
-
-  if (provider === 'algolia') {
-    return {
-      provider: 'algolia',
-      options: {
-        locales: {
-          [localeKey]: {
-            ...pack.search.algolia,
-            askAi: pack.search.askAi
-          }
-        }
-      }
-    }
-  }
-
-  return {
-    provider: 'local',
-    options: {
-      locales: {
-        [localeKey]: pack.search.local
-      }
-    }
-  }
-}
-
 export function defineLangConfig(
   locale: SupportedLocale,
-  override: LocaleConfigOverride = {},
-  options: DefineLangConfigOptions = {}
-) {
-  const pack = localePacks[locale]
-  const localeKey = options.localeKey ?? locale
-  const searchProvider = options.searchProvider ?? 'local'
+  override: Partial<VPi18nConfig> = {},
+): VPi18nConfig {
+  const config = localePacks[locale]
 
-  const baseConfig: Partial<LocaleConfigOverride> = {
-    label: pack.label,
-    lang: pack.lang,
-    link: pack.link,
-    themeConfig: {
-      ...pack.themeConfig,
-      search: createSearchConfig(locale, localeKey, searchProvider)
-    }
-  }
+  const merged = deepMerge(
+    config as unknown as PlainObject,
+    override as unknown as PlainObject,
+  ) as VPi18nConfig
 
-  const merged = deepMerge<typeof override>(baseConfig, override)
-
-  if (merged.themeConfig!.editLink!.pattern === 'UNDEFINED') {
-    delete merged!.themeConfig!.editLink
+  if (merged.themeConfig.editLink?.pattern === 'UNDEFINED') {
+    merged.themeConfig.editLink = undefined
   }
 
   return merged

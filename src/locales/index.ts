@@ -1,4 +1,4 @@
-import type { SupportedLocale, VitePressLocalePack } from '../types'
+import type { SupportedLocale, VPi18nConfig } from '../types'
 
 import de from './de'
 import en from './en'
@@ -7,10 +7,11 @@ import fr from './fr'
 import hu from './hu'
 
 export { de, en, es, fr, hu }
-export const localePacks = {
+
+export const localePacks: Record<SupportedLocale, VPi18nConfig> = {
   de,
   en,
   es,
   fr,
   hu,
-} satisfies Record<SupportedLocale, VitePressLocalePack>
+}
