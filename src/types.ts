@@ -4,24 +4,212 @@ export type SupportedLocale = 'de' | 'en' | 'es' | 'fr' | 'hu'
 
 export type ThemeConfig = DefaultTheme.Config
 
-export type LocalSearchTranslations =
-  NonNullable<DefaultTheme.LocalSearchOptions['translations']>
+type PlainFunction = (...args: never[]) => unknown
 
-export type AlgoliaSearchTranslations =
+/**
+ * Strict translation object:
+ *
+ * - every upstream key must be present
+ * - nested objects must also list their keys
+ * - leaf values may be undefined to intentionally use the upstream default
+ *
+ * Example:
+ *
+ * {
+ *   placeholderText: undefined
+ * }
+ *
+ * is valid.
+ *
+ * Missing `placeholderText` is invalid.
+ */
+type StrictTranslationObject<T> = {
+  [Key in keyof Required<NonNullable<T>>]-?: StrictTranslationValue<
+    Required<NonNullable<T>>[Key]
+  >
+}
+
+type StrictTranslationValue<T> =
+  NonNullable<T> extends PlainFunction
+    ? NonNullable<T> | undefined
+    : NonNullable<T> extends readonly unknown[]
+      ? NonNullable<T> | undefined
+      : NonNullable<T> extends object
+        ? StrictTranslationObject<NonNullable<T>>
+        : NonNullable<T> | undefined
+
+type RequiredTranslationPick<T, Keys extends PropertyKey> = {
+  [Key in Extract<keyof Required<NonNullable<T>>, Keys>]-?: StrictTranslationValue<
+    Required<NonNullable<T>>[Key]
+  >
+}
+
+type OptionalRemaining<T, Keys extends PropertyKey> = Partial<
+  Omit<NonNullable<T>, Extract<keyof NonNullable<T>, Keys>>
+>
+
+export type DeepPartial<T> =
+  T extends PlainFunction
+    ? T
+    : T extends readonly (infer Item)[]
+      ? readonly DeepPartial<Item>[]
+      : T extends object
+        ? {
+            [Key in keyof T]?: DeepPartial<T[Key]>
+          }
+        : T
+
+type ThemeTextTranslationKeys =
+  | 'langMenuLabel'
+  | 'returnToTopLabel'
+  | 'sidebarMenuLabel'
+  | 'darkModeSwitchLabel'
+  | 'lightModeSwitchTitle'
+  | 'darkModeSwitchTitle'
+  | 'skipToContentLabel'
+
+type ThemeTextTranslations = RequiredTranslationPick<
+  ThemeConfig,
+  ThemeTextTranslationKeys
+>
+
+type NotFoundConfig = NonNullable<ThemeConfig['notFound']>
+
+type NotFoundTranslationKeys =
+  | 'title'
+  | 'quote'
+  | 'linkLabel'
+  | 'linkText'
+
+type NotFoundTranslations =
+  RequiredTranslationPick<NotFoundConfig, NotFoundTranslationKeys> &
+  OptionalRemaining<NotFoundConfig, NotFoundTranslationKeys>
+
+type FooterConfig = NonNullable<ThemeConfig['footer']>
+
+type FooterTranslationKeys = 'message'
+
+type FooterTranslations =
+  RequiredTranslationPick<FooterConfig, FooterTranslationKeys> &
+  OptionalRemaining<FooterConfig, FooterTranslationKeys>
+
+type DocFooterConfig = NonNullable<ThemeConfig['docFooter']>
+
+type DocFooterTranslationKeys =
+  | 'prev'
+  | 'next'
+
+type DocFooterTranslations =
+  RequiredTranslationPick<DocFooterConfig, DocFooterTranslationKeys> &
+  OptionalRemaining<DocFooterConfig, DocFooterTranslationKeys>
+
+type OutlineConfig = Extract<NonNullable<ThemeConfig['outline']>, object>
+
+type OutlineTranslationKeys = 'label'
+
+type OutlineTranslations =
+  RequiredTranslationPick<OutlineConfig, OutlineTranslationKeys> &
+  OptionalRemaining<OutlineConfig, OutlineTranslationKeys>
+
+type EditLinkConfig = NonNullable<ThemeConfig['editLink']>
+
+type EditLinkTranslationKeys = 'text'
+
+type EditLinkTranslations =
+  RequiredTranslationPick<EditLinkConfig, EditLinkTranslationKeys> &
+  OptionalRemaining<EditLinkConfig, EditLinkTranslationKeys>
+
+type LastUpdatedConfig = NonNullable<ThemeConfig['lastUpdated']>
+
+type LastUpdatedTranslationKeys = 'text'
+
+type LastUpdatedTranslations =
+  RequiredTranslationPick<LastUpdatedConfig, LastUpdatedTranslationKeys> &
+  OptionalRemaining<LastUpdatedConfig, LastUpdatedTranslationKeys>
+
+/**
+ * Required VitePress default-theme translation keys.
+ *
+ * This intentionally excludes project-specific content/config such as:
+ * - nav
+ * - sidebar
+ * - footer
+ * - logo
+ * - socialLinks
+ * - carbonAds
+ * - search
+ *
+ * Non-translation config fields stay optional:
+ * - outline.level
+ * - editLink.pattern
+ * - lastUpdated.formatOptions
+ * - notFound.link
+ * - notFound.code
+ */
+export type ThemeTranslations = ThemeTextTranslations & {
+  notFound: NotFoundTranslations
+  footer: FooterTranslations
+  docFooter: DocFooterTranslations
+  outline: OutlineTranslations
+  editLink: EditLinkTranslations
+  lastUpdated: LastUpdatedTranslations
+}
+
+export type LocalSearchTranslations = StrictTranslationObject<
+  NonNullable<DefaultTheme.LocalSearchOptions['translations']>
+>
+
+export type AlgoliaSearchTranslations = StrictTranslationObject<
   NonNullable<DefaultTheme.AlgoliaSearchOptions['translations']>
+>
 
 type AskAiObject = Extract<
   NonNullable<DefaultTheme.AlgoliaSearchOptions['askAi']>,
   object
 >
 
-export type AlgoliaAskAiSidePanelTranslations =
-  AskAiObject['sidePanel']
+type AskAiSidePanel = Extract<
+  NonNullable<AskAiObject['sidePanel']>,
+  object
+>
+
+type AskAiButton = Extract<
+  NonNullable<AskAiSidePanel['button']>,
+  object
+>
+
+type AskAiPanel = Extract<
+  NonNullable<AskAiSidePanel['panel']>,
+  object
+>
+
+type AskAiButtonTranslations = StrictTranslationObject<
+  NonNullable<AskAiButton['translations']>
+>
+
+type AskAiPanelTranslations = StrictTranslationObject<
+  NonNullable<AskAiPanel['translations']>
+>
+
+export type AlgoliaAskAiSidePanelTranslations = {
+  button: {
+    translations: AskAiButtonTranslations
+  }
+  panel: {
+    translations: AskAiPanelTranslations
+  }
+}
 
 export type SearchConfig = {
-  local: { translations: LocalSearchTranslations }
-  algolia: { translations: AlgoliaSearchTranslations }
-  askAi: { sidePanel: AlgoliaAskAiSidePanelTranslations }
+  local: {
+    translations: LocalSearchTranslations
+  }
+  algolia: {
+    translations: AlgoliaSearchTranslations
+  }
+  askAi: {
+    sidePanel: AlgoliaAskAiSidePanelTranslations
+  }
 }
 
 type VitePressLocaleConfig =
@@ -32,10 +220,14 @@ export type VPi18nConfig =
     label: string
     lang: string
     link?: string
-    themeConfig: Partial<ThemeConfig>
+    themeConfig: ThemeTranslations
     search: SearchConfig
   }
 
-export type VPi18nConfigOverride = Partial<VPi18nConfig>
+export type VPi18nConfigOverride =
+  Omit<DeepPartial<VitePressLocaleConfig>, 'themeConfig'> & {
+    themeConfig?: DeepPartial<ThemeConfig>
+    search?: DeepPartial<SearchConfig>
+  }
 
 export type PlainObject = Record<string, unknown>
