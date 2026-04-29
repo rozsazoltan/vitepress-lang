@@ -38,14 +38,8 @@ export function defineLangConfig(
 ): VPi18nConfig {
   const config = localePacks[locale]
 
-  const merged = deepMerge(
+  return deepMerge(
     config as unknown as PlainObject,
     override as unknown as PlainObject,
   ) as VPi18nConfig
-
-  if (merged.themeConfig.editLink.pattern === 'UNDEFINED') {
-    merged.themeConfig.editLink = undefined as never
-  }
-
-  return merged
 }
