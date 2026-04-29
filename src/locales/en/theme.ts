@@ -26,7 +26,6 @@ export default {
   },
 
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Edit this page',
   },
 

@@ -18,7 +18,6 @@ export default {
     label: '이 페이지에서',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: '이 페이지 편집',
   },
   lastUpdated: {

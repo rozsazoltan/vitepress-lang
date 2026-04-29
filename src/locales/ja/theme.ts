@@ -18,7 +18,6 @@ export default {
     label: 'このページの内容',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'このページを編集',
   },
   lastUpdated: {

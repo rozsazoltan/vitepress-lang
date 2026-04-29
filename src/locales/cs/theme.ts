@@ -18,7 +18,6 @@ export default {
     label: 'Na této stránce',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Upravit tuto stránku',
   },
   lastUpdated: {

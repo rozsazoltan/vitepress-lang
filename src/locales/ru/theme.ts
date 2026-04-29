@@ -18,7 +18,6 @@ export default {
     label: 'На этой странице',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Редактировать эту страницу',
   },
   lastUpdated: {

@@ -18,7 +18,6 @@ export default {
     label: 'Na ovoj stranici',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Izmeni ovu stranicu',
   },
   lastUpdated: {

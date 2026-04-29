@@ -18,7 +18,6 @@ export default {
     label: 'Na tejto stránke',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Upraviť túto stránku',
   },
   lastUpdated: {

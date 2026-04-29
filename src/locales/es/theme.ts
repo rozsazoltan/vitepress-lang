@@ -18,7 +18,6 @@ export default {
     label: 'En esta página',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Editar esta página',
   },
   lastUpdated: {

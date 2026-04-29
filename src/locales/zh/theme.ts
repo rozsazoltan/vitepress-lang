@@ -18,7 +18,6 @@ export default {
     label: '本页内容',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: '编辑此页面',
   },
   lastUpdated: {

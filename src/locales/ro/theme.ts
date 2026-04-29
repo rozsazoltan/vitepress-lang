@@ -18,7 +18,6 @@ export default {
     label: 'Pe această pagină',
   },
   editLink: {
-    pattern: 'UNDEFINED',
     text: 'Editează această pagină',
   },
   lastUpdated: {
